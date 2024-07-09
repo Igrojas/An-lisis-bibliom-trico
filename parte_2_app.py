@@ -8,9 +8,9 @@ st.header("¿Qué es un Grafo?")
 
 st.markdown("""
 Un grafo es una estructura matemática que consiste en un conjunto de **vértices** (nodos) y **aristas** (enlaces) que los conectan. 
-Se representa matemáticamente como \( G = (V, E) \), donde:
-- \( V \) es un conjunto de vértices.
-- \( E \) es un conjunto de aristas, que son pares de vértices que establecen una relación entre ellos.
+Se representa matemáticamente como /( G = (V, E) /), donde:
+- /( V /) es un conjunto de vértices.
+- /( E /) es un conjunto de aristas, que son pares de vértices que establecen una relación entre ellos.
 
 ### Tipos de Grafos:
 1. **Grafo No Dirigido**: Las aristas no tienen dirección, es decir, la relación entre dos vértices es simétrica.
@@ -79,13 +79,13 @@ Se identificaron 16 comunidades de grandes productores en la red de coautoría. 
 
 Este análisis proporciona una visión profunda de la estructura y la colaboración en la red de coautoría, destacando la importancia de los algoritmos utilizados para comprender mejor la dinámica entre los autores en el campo de estudio.
 """)
-img = Image.open('imagenes\CompPrincipal_autores_1000.png')
+img = Image.open('imagenes/CompPrincipal_autores_1000.png')
 st.image(img, caption='Componentes Principales de Autores')
 
 
 st.write("La siguiente imagen muestra el mismo grafo, pero esta vez se identifica cada comunidad de autores con un color"
          )
-img = Image.open('imagenes\CompPrincipal_autores_clusters_1000.png')
+img = Image.open('imagenes/CompPrincipal_autores_clusters_1000.png')
 st.image(img, caption='Componentes Principales de Autores')
 
 
@@ -104,7 +104,7 @@ El análisis de comunidades de autores revela lo siguiente:
 Estos hallazgos muestran la estructura y distribución de colaboraciones en la red de coautoría, resaltando la presencia significativa de comunidades chilenas y su conexión global en la investigación científica.
 """)
 
-img = Image.open('imagenes\Comunidades_extranjeras_1000.png')
+img = Image.open('imagenes/Comunidades_extranjeras_1000.png')
 st.image(img, caption='Componentes Principales de Autores')
 
 
@@ -120,5 +120,5 @@ La red de comunidades de grandes productores muestra la estructura de colaboraci
 Este análisis permite visualizar la distribución y conexiones dentro de la red de coautoría, evidenciando la influencia y colaboración entre autores destacados tanto nacionales como internacionales.
 """)
 
-img = Image.open('imagenes\clusters2_1000.png')
+img = Image.open('imagenes/clusters2_1000.png')
 st.image(img, caption='Componentes Principales de Autores')
