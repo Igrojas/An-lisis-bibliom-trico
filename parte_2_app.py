@@ -8,9 +8,9 @@ st.header("¿Qué es un Grafo?")
 
 st.markdown("""
 Un grafo es una estructura matemática que consiste en un conjunto de **vértices** (nodos) y **aristas** (enlaces) que los conectan. 
-Se representa matemáticamente como /( G = (V, E) /), donde:
-- /( V /) es un conjunto de vértices.
-- /( E /) es un conjunto de aristas, que son pares de vértices que establecen una relación entre ellos.
+Se representa matemáticamente como \( G = (V, E) \), donde:
+- \( V \) es un conjunto de vértices.
+- \( E \) es un conjunto de aristas, que son pares de vértices que establecen una relación entre ellos.
 
 ### Tipos de Grafos:
 1. **Grafo No Dirigido**: Las aristas no tienen dirección, es decir, la relación entre dos vértices es simétrica.
