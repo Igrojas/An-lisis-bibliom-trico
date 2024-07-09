@@ -1,9 +1,5 @@
 import streamlit as st
 from utils import *
-import networkx as nx
-from pyvis.network import Network
-import matplotlib.pyplot as plt
-from networkx.drawing.nx_agraph import graphviz_layout
 from PIL import Image
 
 st.title("Análisis de Redes de Coautoría en Psicología Chilena")
