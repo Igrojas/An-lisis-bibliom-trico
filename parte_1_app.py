@@ -5,7 +5,7 @@ from utils import *
 
 # Datos
 
-salida_autores = pd.read_excel("data\salida_autores.xlsx")
+salida_autores = pd.read_excel("data/salida_autores.xlsx")
 salida_articulos = pd.read_excel("data/output_articles.xlsx")
 salida_revistas = pd.read_excel("data/salida_revistas.xlsx")
 salida_filiaciones = pd.read_excel("data/salida_filiaciones.xlsx")
