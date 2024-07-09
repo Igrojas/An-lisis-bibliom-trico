@@ -1,0 +1,110 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2023-03-29">
+    <creator>NetworkX 2.8.4</creator>
+  </meta>
+  <graph defaultedgetype="undirected" mode="static" name="">
+    <nodes>
+      <node id="INS:(pontificia universidad católica de chile)_PAIS:(chile)" label="INS:(pontificia universidad católica de chile)_PAIS:(chile)" />
+      <node id="INS:(universidad autónoma de madrid)_PAIS:(españa)" label="INS:(universidad autónoma de madrid)_PAIS:(españa)" />
+      <node id="INS:(conicet)_PAIS:(argentina)" label="INS:(conicet)_PAIS:(argentina)" />
+      <node id="INS:(universidad favaloro)_PAIS:(argentina)" label="INS:(universidad favaloro)_PAIS:(argentina)" />
+      <node id="INS:(universidad de concepción)_PAIS:(chile)" label="INS:(universidad de concepción)_PAIS:(chile)" />
+      <node id="INS:(universidad de santiago de chile)_PAIS:(chile)" label="INS:(universidad de santiago de chile)_PAIS:(chile)" />
+      <node id="INS:(universidad de california)_PAIS:(usa)" label="INS:(universidad de california)_PAIS:(usa)" />
+      <node id="INS:(universidad de sao paulo)_PAIS:(brasil)" label="INS:(universidad de sao paulo)_PAIS:(brasil)" />
+      <node id="INS:(slovak acad sci)_PAIS:(eslovaquia)" label="INS:(slovak acad sci)_PAIS:(eslovaquia)" />
+      <node id="INS:(univ tartu)_PAIS:(estonia)" label="INS:(univ tartu)_PAIS:(estonia)" />
+      <node id="INS:(jagiellonian university)_PAIS:(polonia)" label="INS:(jagiellonian university)_PAIS:(polonia)" />
+      <node id="INS:(univ ghent)_PAIS:(belgica)" label="INS:(univ ghent)_PAIS:(belgica)" />
+      <node id="INS:(univ fed paraiba)_PAIS:(brasil)" label="INS:(univ fed paraiba)_PAIS:(brasil)" />
+      <node id="INS:(university of gdańsk)_PAIS:(polonia)" label="INS:(university of gdańsk)_PAIS:(polonia)" />
+      <node id="INS:(universidad del desarrollo)_PAIS:(chile)" label="INS:(universidad del desarrollo)_PAIS:(chile)" />
+      <node id="INS:(universidad andres bello)_PAIS:(chile)" label="INS:(universidad andres bello)_PAIS:(chile)" />
+      <node id="INS:(universidad de chile)_PAIS:(chile)" label="INS:(universidad de chile)_PAIS:(chile)" />
+      <node id="INS:(universidad autónoma de chile)_PAIS:(chile)" label="INS:(universidad autónoma de chile)_PAIS:(chile)" />
+      <node id="INS:(pontificia universidad católica de valparaíso)_PAIS:(chile)" label="INS:(pontificia universidad católica de valparaíso)_PAIS:(chile)" />
+      <node id="INS:(universidad playa ancha)_PAIS:(chile)" label="INS:(universidad playa ancha)_PAIS:(chile)" />
+      <node id="INS:(katholieke univ leuven)_PAIS:(belgica)" label="INS:(katholieke univ leuven)_PAIS:(belgica)" />
+      <node id="INS:(eotvos lorand univ)_PAIS:(hungria)" label="INS:(eotvos lorand univ)_PAIS:(hungria)" />
+      <node id="INS:(univ queensland)_PAIS:(australia)" label="INS:(univ queensland)_PAIS:(australia)" />
+      <node id="INS:(millennium institute for research in depression and personality)_PAIS:(chile)" label="INS:(millennium institute for research in depression and personality)_PAIS:(chile)" />
+      <node id="INS:(universidad diego portales)_PAIS:(chile)" label="INS:(universidad diego portales)_PAIS:(chile)" />
+      <node id="INS:(universidad valparaiso)_PAIS:(chile)" label="INS:(universidad valparaiso)_PAIS:(chile)" />
+      <node id="INS:(universidad católica de temuco)_PAIS:(chile)" label="INS:(universidad católica de temuco)_PAIS:(chile)" />
+      <node id="INS:(universidad de los lagos)_PAIS:(chile)" label="INS:(universidad de los lagos)_PAIS:(chile)" />
+      <node id="INS:(universidad alberto hurtado)_PAIS:(chile)" label="INS:(universidad alberto hurtado)_PAIS:(chile)" />
+      <node id="INS:(universidad santo tomas)_PAIS:(chile)" label="INS:(universidad santo tomas)_PAIS:(chile)" />
+      <node id="INS:(universidad austral de chile)_PAIS:(chile)" label="INS:(universidad austral de chile)_PAIS:(chile)" />
+      <node id="INS:(universidad de la frontera)_PAIS:(chile)" label="INS:(universidad de la frontera)_PAIS:(chile)" />
+      <node id="INS:(univ washington)_PAIS:(usa)" label="INS:(univ washington)_PAIS:(usa)" />
+      <node id="INS:(universidad de standforf)_PAIS:(usa)" label="INS:(universidad de standforf)_PAIS:(usa)" />
+      <node id="INS:(university of cambridge)_PAIS:(inglaterra)" label="INS:(university of cambridge)_PAIS:(inglaterra)" />
+      <node id="INS:(universidad northwester)_PAIS:(usa)" label="INS:(universidad northwester)_PAIS:(usa)" />
+      <node id="INS:(univ auckland)_PAIS:(nueva zelanda)" label="INS:(univ auckland)_PAIS:(nueva zelanda)" />
+      <node id="INS:(universidad de los andes)_PAIS:(chile)" label="INS:(universidad de los andes)_PAIS:(chile)" />
+      <node id="INS:(university college london)_PAIS:(inglaterra)" label="INS:(university college london)_PAIS:(inglaterra)" />
+      <node id="INS:(universidad de michigan)_PAIS:(usa)" label="INS:(universidad de michigan)_PAIS:(usa)" />
+      <node id="INS:(michigan state univ)_PAIS:(usa)" label="INS:(michigan state univ)_PAIS:(usa)" />
+      <node id="INS:(universidad adolfo ibañez)_PAIS:(chile)" label="INS:(universidad adolfo ibañez)_PAIS:(chile)" />
+      <node id="INS:(universidad católica del maule)_PAIS:(chile)" label="INS:(universidad católica del maule)_PAIS:(chile)" />
+      <node id="INS:(universidad del bío-bio)_PAIS:(chile)" label="INS:(universidad del bío-bio)_PAIS:(chile)" />
+    </nodes>
+    <edges>
+      <edge source="INS:(pontificia universidad católica de chile)_PAIS:(chile)" target="INS:(universidad autónoma de madrid)_PAIS:(españa)" id="0" weight="4" />
+      <edge source="INS:(pontificia universidad católica de chile)_PAIS:(chile)" target="INS:(universidad de california)_PAIS:(usa)" id="1" weight="7" />
+      <edge source="INS:(pontificia universidad católica de chile)_PAIS:(chile)" target="INS:(universidad de sao paulo)_PAIS:(brasil)" id="2" weight="4" />
+      <edge source="INS:(pontificia universidad católica de chile)_PAIS:(chile)" target="INS:(universidad andres bello)_PAIS:(chile)" id="3" weight="6" />
+      <edge source="INS:(pontificia universidad católica de chile)_PAIS:(chile)" target="INS:(universidad de chile)_PAIS:(chile)" id="4" weight="35" />
+      <edge source="INS:(pontificia universidad católica de chile)_PAIS:(chile)" target="INS:(millennium institute for research in depression and personality)_PAIS:(chile)" id="5" weight="5" />
+      <edge source="INS:(pontificia universidad católica de chile)_PAIS:(chile)" target="INS:(universidad diego portales)_PAIS:(chile)" id="6" weight="10" />
+      <edge source="INS:(pontificia universidad católica de chile)_PAIS:(chile)" target="INS:(universidad valparaiso)_PAIS:(chile)" id="7" weight="4" />
+      <edge source="INS:(pontificia universidad católica de chile)_PAIS:(chile)" target="INS:(universidad del desarrollo)_PAIS:(chile)" id="8" weight="10" />
+      <edge source="INS:(pontificia universidad católica de chile)_PAIS:(chile)" target="INS:(universidad alberto hurtado)_PAIS:(chile)" id="9" weight="8" />
+      <edge source="INS:(pontificia universidad católica de chile)_PAIS:(chile)" target="INS:(universidad de concepción)_PAIS:(chile)" id="10" weight="4" />
+      <edge source="INS:(pontificia universidad católica de chile)_PAIS:(chile)" target="INS:(universidad de santiago de chile)_PAIS:(chile)" id="11" weight="4" />
+      <edge source="INS:(pontificia universidad católica de chile)_PAIS:(chile)" target="INS:(univ washington)_PAIS:(usa)" id="12" weight="4" />
+      <edge source="INS:(pontificia universidad católica de chile)_PAIS:(chile)" target="INS:(universidad de standforf)_PAIS:(usa)" id="13" weight="4" />
+      <edge source="INS:(pontificia universidad católica de chile)_PAIS:(chile)" target="INS:(universidad northwester)_PAIS:(usa)" id="14" weight="4" />
+      <edge source="INS:(pontificia universidad católica de chile)_PAIS:(chile)" target="INS:(univ auckland)_PAIS:(nueva zelanda)" id="15" weight="4" />
+      <edge source="INS:(pontificia universidad católica de chile)_PAIS:(chile)" target="INS:(universidad de los andes)_PAIS:(chile)" id="16" weight="5" />
+      <edge source="INS:(pontificia universidad católica de chile)_PAIS:(chile)" target="INS:(university college london)_PAIS:(inglaterra)" id="17" weight="5" />
+      <edge source="INS:(pontificia universidad católica de chile)_PAIS:(chile)" target="INS:(universidad de michigan)_PAIS:(usa)" id="18" weight="4" />
+      <edge source="INS:(pontificia universidad católica de chile)_PAIS:(chile)" target="INS:(michigan state univ)_PAIS:(usa)" id="19" weight="4" />
+      <edge source="INS:(pontificia universidad católica de chile)_PAIS:(chile)" target="INS:(universidad adolfo ibañez)_PAIS:(chile)" id="20" weight="6" />
+      <edge source="INS:(conicet)_PAIS:(argentina)" target="INS:(universidad favaloro)_PAIS:(argentina)" id="21" weight="9" />
+      <edge source="INS:(universidad de concepción)_PAIS:(chile)" target="INS:(universidad de santiago de chile)_PAIS:(chile)" id="22" weight="4" />
+      <edge source="INS:(universidad de concepción)_PAIS:(chile)" target="INS:(universidad del desarrollo)_PAIS:(chile)" id="23" weight="4" />
+      <edge source="INS:(universidad de concepción)_PAIS:(chile)" target="INS:(universidad santo tomas)_PAIS:(chile)" id="24" weight="6" />
+      <edge source="INS:(universidad de concepción)_PAIS:(chile)" target="INS:(universidad del bío-bio)_PAIS:(chile)" id="25" weight="5" />
+      <edge source="INS:(universidad de santiago de chile)_PAIS:(chile)" target="INS:(universidad de chile)_PAIS:(chile)" id="26" weight="4" />
+      <edge source="INS:(universidad de santiago de chile)_PAIS:(chile)" target="INS:(universidad autónoma de chile)_PAIS:(chile)" id="27" weight="5" />
+      <edge source="INS:(universidad de santiago de chile)_PAIS:(chile)" target="INS:(universidad diego portales)_PAIS:(chile)" id="28" weight="5" />
+      <edge source="INS:(universidad de santiago de chile)_PAIS:(chile)" target="INS:(universidad santo tomas)_PAIS:(chile)" id="29" weight="5" />
+      <edge source="INS:(universidad de santiago de chile)_PAIS:(chile)" target="INS:(pontificia universidad católica de valparaíso)_PAIS:(chile)" id="30" weight="5" />
+      <edge source="INS:(universidad de california)_PAIS:(usa)" target="INS:(university of cambridge)_PAIS:(inglaterra)" id="31" weight="4" />
+      <edge source="INS:(universidad de california)_PAIS:(usa)" target="INS:(universidad de chile)_PAIS:(chile)" id="32" weight="7" />
+      <edge source="INS:(universidad de california)_PAIS:(usa)" target="INS:(universidad de michigan)_PAIS:(usa)" id="33" weight="4" />
+      <edge source="INS:(slovak acad sci)_PAIS:(eslovaquia)" target="INS:(univ tartu)_PAIS:(estonia)" id="34" weight="4" />
+      <edge source="INS:(jagiellonian university)_PAIS:(polonia)" target="INS:(univ ghent)_PAIS:(belgica)" id="35" weight="4" />
+      <edge source="INS:(univ ghent)_PAIS:(belgica)" target="INS:(katholieke univ leuven)_PAIS:(belgica)" id="36" weight="4" />
+      <edge source="INS:(univ fed paraiba)_PAIS:(brasil)" target="INS:(university of gdańsk)_PAIS:(polonia)" id="37" weight="4" />
+      <edge source="INS:(universidad del desarrollo)_PAIS:(chile)" target="INS:(universidad de chile)_PAIS:(chile)" id="38" weight="8" />
+      <edge source="INS:(universidad andres bello)_PAIS:(chile)" target="INS:(pontificia universidad católica de valparaíso)_PAIS:(chile)" id="39" weight="5" />
+      <edge source="INS:(universidad andres bello)_PAIS:(chile)" target="INS:(universidad católica de temuco)_PAIS:(chile)" id="40" weight="4" />
+      <edge source="INS:(universidad de chile)_PAIS:(chile)" target="INS:(universidad autónoma de chile)_PAIS:(chile)" id="41" weight="5" />
+      <edge source="INS:(universidad de chile)_PAIS:(chile)" target="INS:(universidad diego portales)_PAIS:(chile)" id="42" weight="6" />
+      <edge source="INS:(universidad de chile)_PAIS:(chile)" target="INS:(universidad valparaiso)_PAIS:(chile)" id="43" weight="5" />
+      <edge source="INS:(universidad de chile)_PAIS:(chile)" target="INS:(universidad alberto hurtado)_PAIS:(chile)" id="44" weight="6" />
+      <edge source="INS:(universidad de chile)_PAIS:(chile)" target="INS:(pontificia universidad católica de valparaíso)_PAIS:(chile)" id="45" weight="4" />
+      <edge source="INS:(universidad de chile)_PAIS:(chile)" target="INS:(universidad católica del maule)_PAIS:(chile)" id="46" weight="4" />
+      <edge source="INS:(universidad autónoma de chile)_PAIS:(chile)" target="INS:(universidad de la frontera)_PAIS:(chile)" id="47" weight="4" />
+      <edge source="INS:(universidad autónoma de chile)_PAIS:(chile)" target="INS:(universidad católica del maule)_PAIS:(chile)" id="48" weight="4" />
+      <edge source="INS:(pontificia universidad católica de valparaíso)_PAIS:(chile)" target="INS:(universidad playa ancha)_PAIS:(chile)" id="49" weight="6" />
+      <edge source="INS:(eotvos lorand univ)_PAIS:(hungria)" target="INS:(univ queensland)_PAIS:(australia)" id="50" weight="4" />
+      <edge source="INS:(universidad católica de temuco)_PAIS:(chile)" target="INS:(universidad de los lagos)_PAIS:(chile)" id="51" weight="7" />
+      <edge source="INS:(universidad católica de temuco)_PAIS:(chile)" target="INS:(universidad de la frontera)_PAIS:(chile)" id="52" weight="5" />
+      <edge source="INS:(universidad austral de chile)_PAIS:(chile)" target="INS:(universidad de la frontera)_PAIS:(chile)" id="53" weight="4" />
+    </edges>
+  </graph>
+</gexf>
