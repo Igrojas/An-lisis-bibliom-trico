@@ -53,7 +53,7 @@ En contraste, la segunda componente más grande consta de 61 autores, representa
 Estos hallazgos proporcionan una visión detallada de la estructura y la colaboración en la red de coautoría en el campo de la psicología, destacando la diversidad y la distribución de la colaboración entre los investigadores.
 """)
 
-st.header("Análisis Detallado de AuthorRank y Comunidades en la Red de Coautoría")
+st.header("Análisis de AuthorRank y Comunidades en la Red de Coautoría")
 
 st.markdown("""
 Este análisis se centra en la componente conexa más grande de la red de coautoría, utilizando el algoritmo AuthorRank y el Algoritmo de Comunidades.
