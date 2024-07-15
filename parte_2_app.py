@@ -2,6 +2,8 @@ import streamlit as st
 from utils import *
 from PIL import Image
 import streamlit.components.v1 as components
+import matplotlib.pyplot as plt
+import networkx as nx
 
 st.title("Análisis de Redes de Coautoría en Psicología Chilena")
 
@@ -22,6 +24,23 @@ Se representa matemáticamente como \( G = (V, E) \), donde:
 ### Ejemplo de Grafo:
 """)
 
+G = nx.Graph()
+
+G.add_node(1)
+G.add_node(2)
+G.add_node(3)
+G.add_node(4)
+
+G.add_edge(1, 2)
+G.add_edge(2, 3)
+G.add_edge(3, 4)
+G.add_edge(4, 1)
+G.add_edge(1, 3)
+
+nx.draw(G, with_labels=True, node_color='blue', node_size=700, font_size=15, font_color='white', edge_color='gray')
+
+# Mostrar el grafo
+plt.show()
 
 st.markdown("""
 Los grafos son una herramienta fundamental en la teoría de redes y tienen aplicaciones extensas en diversas áreas del conocimiento y la tecnología.
