@@ -19,16 +19,9 @@ st.markdown("""
             
 En este portafolio, presento un resumen del análisis realizado en mi memoria de título sobre la estructura de la red de coautoría y la productividad científica de psicólogos chilenos entre 2015 y 2020.
 Utilicé metodologías avanzadas como unificación de datos de Scopus, Web of Science (WOS) y Scielo, algoritmos como AuthorRank y NMF,
-y evalué la colaboración mediante el coeficiente modificado. Este portafolio destaca los hallazgos clave y la metodología utilizada en mi investigación.
-
-
-En mi memoria de titulo realizé un estudio bibliometrico de 
-- Unificación y deduplicación de datos de bases de datos como Scopus, Web of Science (WOS) y Scielo.
-- Implementación de algoritmos como AuthorRank y detección de comunidades para posicionar a los autores en la red de coautoría y revelar conglomerados de instituciones y autores.
-- Aplicación del algoritmo de Factorización de Matrices No Negativas (NMF) para explorar y analizar los temas y áreas temáticas dentro de la psicología.
-- Uso del coeficiente de colaboración modificado para evaluar la intensidad de la colaboración entre los investigadores.
-
-Esta metodología integral proporcionó una comprensión exhaustiva de la productividad científica en psicología por parte de los autores chilenos, resaltando la importancia de los algoritmos mencionados, incluido el análisis de temas a través de NMF, en el análisis de la red de coautoría.
+y evalué la colaboración mediante el coeficiente modificado. Este trabajo destaca los hallazgos clave y la metodología utilizada, 
+proporcionando una comprensión exhaustiva de la productividad científica en psicología, enfatizando la importancia de los algoritmos empleados,
+especialmente el análisis de temas mediante NMF, en el estudio de la red de coautoría.
 """)
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
