@@ -62,7 +62,12 @@ Este análisis se centra en la componente conexa más grande de la red de coauto
 st.markdown("""            
 ### [AuthorRank](https://an-lisis-bibliom-trico-q347mhuyf9j4wxsl9kdf2c.streamlit.app/)
 
-Se utilizó el algoritmo AuthorRank para asignar un ranking a cada autor en la red de coautoría. Los tonos más oscuros indican un mayor ranking. Destacan autores como Agustín Ibáñez en el primer lugar de AuthorRank, seguido de Alfonso Urzúa, y similares rangos para Adolfo García, Felipe García y Marianne Krause.
+        Se utilizó el algoritmo AuthorRank para asignar un ranking a cada autor en la red de coautoría.
+        Los tonos más oscuros indican un mayor ranking. 
+        Destacan autores como Agustín Ibáñez en el primer lugar de AuthorRank, seguido de Alfonso Urzúa,
+        y similares rangos para Adolfo García, Felipe García y Marianne Krause.
+            
+        El siguiente grafo solo muestra a los autores que tiene 10 o más artículos científicos
 """)
 
 
