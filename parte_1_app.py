@@ -26,7 +26,7 @@ especialmente el análisis de temas mediante NMF, en el estudio de la red de coa
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
 
-st.header("""Indicadores básicos""")
+st.header("""Productividad científica""")
 
 principales_indicadores(salida_autores, salida_articulos)
 
