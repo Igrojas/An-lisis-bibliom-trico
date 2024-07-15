@@ -79,14 +79,14 @@ Se identificaron 16 comunidades de grandes productores en la red de coautoría. 
 
 Este análisis proporciona una visión profunda de la estructura y la colaboración en la red de coautoría, destacando la importancia de los algoritmos utilizados para comprender mejor la dinámica entre los autores en el campo de estudio.
 """)
-img = Image.open('imagenes/CompPrincipal_autores_1000.png')
-st.image(img, caption='Componentes Principales de Autores')
+# img = Image.open('imagenes/CompPrincipal_autores_1000.png')
+# st.image(img, caption='Componentes Principales de Autores')
 
 
-st.write("La siguiente imagen muestra el mismo grafo, pero esta vez se identifica cada comunidad de autores con un color"
-         )
-img = Image.open('imagenes/CompPrincipal_autores_clusters_1000.png')
-st.image(img, caption='Componentes Principales de Autores')
+# st.write("La siguiente imagen muestra el mismo grafo, pero esta vez se identifica cada comunidad de autores con un color"
+#          )
+# img = Image.open('imagenes/CompPrincipal_autores_clusters_1000.png')
+# st.image(img, caption='Componentes Principales de Autores')
 
 
 st.header('Comunidades de Autores')
