@@ -1,6 +1,7 @@
 import streamlit as st
 from utils import *
 from PIL import Image
+import streamlit.components.v1 as components
 
 st.title("Análisis de Redes de Coautoría en Psicología Chilena")
 
@@ -66,6 +67,11 @@ Se utilizó el algoritmo AuthorRank para asignar un ranking a cada autor en la r
 
 
 mostrar_tabla()
+
+with open('GrafoCoautoria.html', 'r', encoding='utf-8') as f:
+    html_content = f.read()
+
+components.html(html_content, height=600)
 
 st.markdown("""  
 ### Algoritmo de Comunidades
