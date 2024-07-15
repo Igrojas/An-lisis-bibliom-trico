@@ -66,12 +66,13 @@ st.markdown("""
         Los tonos más oscuros indican un mayor ranking. 
         Destacan autores como Agustín Ibáñez en el primer lugar de AuthorRank, seguido de Alfonso Urzúa,
         y similares rangos para Adolfo García, Felipe García y Marianne Krause.
-            
-        El siguiente grafo solo muestra a los autores que tiene 10 o más artículos científicos
+        
 """)
 
 
 mostrar_tabla()
+
+st.header("Grafo con autores con más de 10 artículos científicos")
 
 with open('GrafoCoautoria.html', 'r', encoding='utf-8') as f:
     html_content = f.read()
