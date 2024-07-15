@@ -16,9 +16,13 @@ st.title("Análisis de Redes de Coautoría y Productividad Científica en Psicol
 
 st.markdown("""
 ## Introducción
+            
+En este portafolio, presento un resumen del análisis realizado en mi memoria de título sobre la estructura de la red de coautoría y la productividad científica de psicólogos chilenos entre 2015 y 2020.
+Utilicé metodologías avanzadas como unificación de datos de Scopus, Web of Science (WOS) y Scielo, algoritmos como AuthorRank y NMF,
+y evalué la colaboración mediante el coeficiente modificado. Este portafolio destaca los hallazgos clave y la metodología utilizada en mi investigación.
 
-Este proyecto se centró en el análisis detallado de la estructura de la red de coautoría y la productividad científica de psicólogos chilenos entre 2015 y 2020. Para lograrlo, se desarrolló una metodología que incluyó:
 
+En mi memoria de titulo realizé un estudio bibliometrico de 
 - Unificación y deduplicación de datos de bases de datos como Scopus, Web of Science (WOS) y Scielo.
 - Implementación de algoritmos como AuthorRank y detección de comunidades para posicionar a los autores en la red de coautoría y revelar conglomerados de instituciones y autores.
 - Aplicación del algoritmo de Factorización de Matrices No Negativas (NMF) para explorar y analizar los temas y áreas temáticas dentro de la psicología.
