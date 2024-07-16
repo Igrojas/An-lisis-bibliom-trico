@@ -143,7 +143,11 @@ La red de comunidades de grandes productores muestra la estructura de colaboraci
 - La presencia de autores con afiliación internacional y su impacto en la red.
 
 Este análisis permite visualizar la distribución y conexiones dentro de la red de coautoría, evidenciando la influencia y colaboración entre autores destacados tanto nacionales como internacionales.
-""")
 
-img = Image.open('imagenes/clusters2_1000.png')
-st.image(img, caption='Componentes Principales de Autores')
+Para este grafo se muestran las primeras 16 comunidades de grandes productores en Chile, donde el mínimo de artículos por autor para estar en el grafo es de 3 artículos
+            """)
+
+with open('Grafo20Comunidad.html', 'r', encoding='utf-8') as f:
+    html_content = f.read()
+
+components.html(html_content, height=600)
