@@ -126,7 +126,7 @@ El análisis de comunidades de autores revela lo siguiente:
 Estos hallazgos muestran la estructura y distribución de colaboraciones en la red de coautoría, resaltando la presencia significativa de comunidades chilenas y su conexión global en la investigación científica.
 """)
 
-st.header("Grafo de comunidades de autores de mayor productividad")
+st.header("Grafo de comunidades de autores de mayor productividad - Las primeras 200 comunidades")
 
 with open('GrafoComunidadAutores.html', 'r', encoding='utf-8') as f:
     html_content = f.read()
