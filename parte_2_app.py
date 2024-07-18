@@ -162,6 +162,7 @@ st.pyplot(fig)
 st.markdown("""
 Viendo este grafo, ¿Que nodo sería considerado el más importante?, para esto aplicamos el algoritmo de PageRank, que por suerte, la librería Networkx, nos ofrece este algoritmo,        
 """)
+fig, ax = plt.subplots()
 pagerank = nx.pagerank(G)
 PlotPagerank(G,pagerank)
 
