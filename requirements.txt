@@ -4,3 +4,5 @@ networkx
 openpyxl
 streamlit_agraph
 pygraphviz 
+gzip
+scipy 
