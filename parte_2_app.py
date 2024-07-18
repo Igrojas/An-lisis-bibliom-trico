@@ -154,6 +154,7 @@ función del número y calidad de los hipervínculos que apuntan hacia ella.
 G = GrafoDirigidoEjemplo()
 fig, ax = plt.subplots()
 pos = nx.nx_agraph.graphviz_layout(G, prog='dot')
+# pos = nx.spring_layout(G)
 nx.draw(G, pos= pos,  with_labels=True, node_color='lightblue', ax=ax)
 ax.set_title('Grafo Dirigido de Ejemplo', fontsize=16)
 st.pyplot(fig)

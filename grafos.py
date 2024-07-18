@@ -125,6 +125,7 @@ def PlotPagerank(G, centrality):
     colors = [normalized_centrality[node] for node in G.nodes()]
 
     pos = nx.nx_agraph.graphviz_layout(G, prog='dot')
+    # pos = nx.spring_layout(G)
     nx.draw(G, pos=pos, with_labels=True, node_color=colors, cmap=plt.cm.inferno, ax=ax)
 
     sm = plt.cm.ScalarMappable(cmap=plt.cm.inferno, norm=plt.Normalize(vmin=min_centrality, vmax=max_centrality))
