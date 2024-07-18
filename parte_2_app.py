@@ -128,10 +128,10 @@ Estos hallazgos muestran la estructura y distribución de colaboraciones en la r
 
 st.header("Grafo de comunidades de autores de mayor productividad - Las primeras 200 comunidades")
 
-with open('GrafoComunidadAutores.html', 'r', encoding='utf-8') as f:
-    html_content = f.read()
+# with open('GrafoComunidadAutores.html', 'r', encoding='utf-8') as f:
+#     html_content = f.read()
 
-components.html(html_content, height=600)
+# components.html(html_content, height=600)
 
 st.header('Red de Comunidades de Grandes Productores')
 
@@ -147,7 +147,7 @@ Este análisis permite visualizar la distribución y conexiones dentro de la red
 Para este grafo se muestran las primeras 16 comunidades de grandes productores en Chile, donde el mínimo de artículos por autor para estar en el grafo es de 3 artículos
             """)
 
-with open('Grafo20Comunidad.html', 'r', encoding='utf-8') as f:
-    html_content = f.read()
+# with open('Grafo20Comunidad.html', 'r', encoding='utf-8') as f:
+#     html_content = f.read()
 
-components.html(html_content, height=600)
+# components.html(html_content, height=600)
