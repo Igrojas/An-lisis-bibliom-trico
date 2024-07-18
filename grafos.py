@@ -114,9 +114,9 @@ def GrafoDirigidoEjemplo():
     
     return G
 
-fig, ax = plt.subplots()
 
 def PlotPagerank(G, centrality):
+    fig, ax = plt.subplots()
     centrality_values = list(centrality.values())
     max_centrality = max(centrality_values)
     min_centrality = min(centrality_values)
