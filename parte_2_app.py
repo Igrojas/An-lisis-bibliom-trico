@@ -241,7 +241,7 @@ Este grafo de coautoría está construido a partir de autores en psicología con
 Los nodos representan a los autores y las aristas indican coautorías, es decir, si trabajaron juntos en un artículo. Las particularidades del grafo son las siguientes:
 
 - El tamaño del nodo corresponde al número de artículos de cada autor; más artículos, nodo más grande.
-- El grosor de la arista representa el total de artículos en conjunto; más artículos en común, arista más anchas.
+- El ancho de la arista representa el total de artículos en conjunto; más artículos en común, arista más anchas.
 - El tamaño del nombre también es proporcional a la cantidad de artículos de cada autor.
 - El gradiente de colores muestra en un color más claro el valor más alto de centralidad calculada.
  
@@ -258,7 +258,9 @@ Los autores más cercanos a otros nodos son Anna Wlodarczyk, Agustín Espinosa, 
 
 Si tuviéramos que elegir un autor "importante" que produzca muchos artículos, colabore ampliamente, tenga una gran intermediación en la red y sea cercano a otros autores,
 sería Alfonso Urzúa, Profesor Titular Chileno de la Universidad Católica del Norte en Antofagasta, Chile.
-            
-
 
 """)
+
+
+
+
