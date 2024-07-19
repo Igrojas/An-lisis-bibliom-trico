@@ -234,4 +234,31 @@ components.html(html_content, height=600)
 
 mostrar_tabla()
 
-st.header("Que chucha pasó !!")
+
+st.markdown("""
+
+Este grafo de coautoría está construido a partir de autores en psicología con al menos una afiliación chilena entre 2015 y 2020.
+Los nodos representan a los autores y las aristas indican coautorías, es decir, si trabajaron juntos en un artículo. Las particularidades del grafo son las siguientes:
+
+- El tamaño del nodo corresponde al número de artículos de cada autor; más artículos, nodo más grande.
+- El grosor de la arista representa el total de artículos en conjunto; más artículos en común, arista más anchas.
+- El tamaño del nombre también es proporcional a la cantidad de artículos de cada autor.
+- El gradiente de colores muestra en un color más claro el valor más alto de centralidad calculada.
+ 
+En los resultados de AuthorRank, Agustín Ibáñez ocupa el primer lugar, seguido de Alfonso Urzúa, Adolfo García, Felipe García y Marianne Krause,
+quienes tienen un AuthorRank similar.
+
+El PageRank muestra resultados similares, liderado por Agustín Ibáñez, seguido de cerca por Alfonso Urzúa, Marianne Krause, Felipe García y Adolfo García.
+
+Tanto en AuthorRank como en PageRank, los autores con los mejores resultados coinciden con los mayores productores en psicología chilena.
+
+Los tres principales conectores de la red son Xavier Orial, Alfonso Urzúa y Marianne Krause.
+
+Los autores más cercanos a otros nodos son Anna Wlodarczyk, Agustín Espinosa, Alfonso Urzúa y Roberto González.
+
+Si tuviéramos que elegir un autor "importante" que produzca muchos artículos, colabore ampliamente, tenga una gran intermediación en la red y sea cercano a otros autores,
+sería Alfonso Urzúa, Profesor Titular Chileno de la Universidad Católica del Norte en Antofagasta, Chile.
+            
+
+
+""")
