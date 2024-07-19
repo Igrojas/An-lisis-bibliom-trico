@@ -1,5 +1,6 @@
 import streamlit as st
 import pandas as pd
+import json
 
 def principales_indicadores(salida_autores, salida_articulos):
     st.write("Número de autores:", len(salida_autores))
@@ -152,30 +153,9 @@ def generar_df_agrupado_total(salida_articulos, salida_topicos):
 
  # # # # #  # # # # #  # # # # #  # # # # #  # # # # #  # # # # #  # # # # #  # # # # #  # # # # #  # # # # # 
 
-data = {
-    "Rank": list(range(1, 26)),
-    "Nombre": [
-        "Ibanez, Agustin", "Alfonso Urzúa M.", "Adolfo M. Garcia", "Felipe E. García", 
-        "Mariane Krause", "Roberto Gonzalez", "Darío Páez-Rovira", "Farkas, Chamarrita", 
-        "Monica Guzmán-Gonzalez", "Gonzalo Salas", "Alejandra Caqueo-Urízar", 
-        "Stanghellini, Giovanni", "Oriol, Xavier", "Marianela Denegri-Coria", 
-        "Wlodarczyk, Anna", "Manuel Cárdenas-Castro", "Claudio Bustos Navarrete", 
-        "Lucas Sedeño", "J. Carola Pérez", "Cristobal Guerra", "Jaime Barrientos-Delgado", 
-        "Berger, Christian", "Maria Veronica Santelices", "Manes, Facundo", "Félix Cova Solar"
-    ],
-    "AuthorRank": [
-        0.002354, 0.001600, 0.001439, 0.001405, 0.001369, 0.001248, 0.001240, 0.001147,
-        0.001056, 0.001021, 0.001019, 0.000950, 0.000944, 0.000923, 0.000922, 0.000915,
-        0.000827, 0.000796, 0.000794, 0.000792, 0.000781, 0.000773, 0.000751, 0.000728,
-        0.000724
-    ],
-    "Comunidad": [
-        1, 2, 1, 3, 4, 8, 5, 6, 11, 10, 2, 16, 9, 7, 13, 11, 12, 1, 4, 23, 11, 22, 6, 1, 12
-    ]
-}
-
 def mostrar_tabla():
-    df = pd.DataFrame(data)
-    with st.expander("Ver tabla completa"):
-        st.table(df)
+
+    centralidad_final = pd.read_excel("data/centralidades.xlsx")
+    st.dataframe(centralidad_final)
+
 

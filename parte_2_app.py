@@ -173,24 +173,42 @@ seguido del nodo $13$ y el nodo $9$""")
 st.header("Entonces, de que va mi memoria de título")
 
 st.markdown("""
-Cuando teniamos todos los datos sobre autores y articulos científicos, los mismos que fueron mostrados en la parte 1, queriamos armar una red de coautoría, con 
-los autores como **nodos** y la coautoría como **arista**, pero aplicar centralidad de grado o centralidad de cercanía era algo muy simple de hacer, considerando la cantidad de datos disponibles.
+**Red de Coautoría y Medidas de Centralidad**
+
+Con todos los datos sobre autores y artículos científicos presentados en la parte 1, queríamos construir una red de coautoría donde los autores son **nodos** y las coautorías son
+ **aristas**. Aplicar centralidad de grado o cercanía resultaba muy básico debido a la cantidad de datos disponibles.
+
+Exploramos el uso de PageRank, pero necesitábamos algo más robusto. Aprovechando datos como el número de artículos, coautorías,
+y la intensidad de colaboración entre autores, implementamos el algoritmo **AuthorRank**, descrito en el artículo
+[Co-authorship networks in the digital library research community](https://www.sciencedirect.com/science/article/abs/pii/S0306457305000336).
+
+### AuthorRank
             
-Entonces podiamos aplicar PageRank, pero tambien nos dejaba con gusto a poco, queriamos aprovechar que teniamos datos como el número de artículos, todas las coautorías de los artículos disponibles,
-la cantidad de coautoía entre autores, etc.
+[**AuthorRank**](https://an-lisis-bibliom-trico-q347mhuyf9j4wxsl9kdf2c.streamlit.app/) clasifica a los autores según la calidad e impacto de sus publicaciones y colaboraciones,
+evaluando su influencia dentro de la red de coautores. Este algoritmo, implementado en Python, permitió utilizar información detallada sobre artículos y coautorías,
+y sus resultados se aplicaron en el **algoritmo de comunidades ABCD** para un análisis más profundo.
+
+Necesitamos un grafo dirigido con pesos para aplicar el algoritmo de AuthorRank, entonces definimos un grafo $G = (V,E,W)$, donde $V$ es el conjunto de nodos, $E$ el conjunto de aristas
+y $W$ el conjunto de pesos $w$, estos pesos $w$ se asignan a cada arista que une un par de nodos $(v_i,v_j)$. Hay que definir que valor va tomar cada peso $w$ de la red, como se 
+van a calcular, y que significado tiene en la red.
             
-Aquí es cuando aparece el paper [Co-authorship networks in the digital library research community](https://www.sciencedirect.com/science/article/abs/pii/S0306457305000336).
-            
-[**AuthorRank**](https://an-lisis-bibliom-trico-q347mhuyf9j4wxsl9kdf2c.streamlit.app/) clasifica a los autores según la calidad e impacto de sus publicaciones y colaboraciones. Basado en el algoritmo PageRank,
-evalúa la influencia de un autor dentro de una red de co-autores, destacando aquellos con conexiones significativas y publicaciones influyentes.
-            
-Este algoritmo fue implementado en python, y permitió aprovechar la información de número de artículos, el número de trabajo en conjunto con otros autores, además, el valor de AuthorRank
-obtenido, fue usado en el **algoritmo de comunidades ABCD**, un algoritmo que veremos más adelante para seguir con el análisis de redes sociales.
-            
-A continuación, se pueden ver las 4 medidas de centralidad: **Intermediación**, **Cercanía**, **PageRank** y **AuthorRank**
+#### Peso de las Aristas en la Red de Coautoría
+
+¿En qué casos el valor de $w$ será alto o bajo? Esto debe definirse. ¿Podemos asignar un valor alto de $w$ entre dos autores que publican frecuentemente juntos? Sí.
+¿Podemos asignar un valor bajo a la arista entre dos autores que comparten un artículo con muchos coautores? Sí.
+Esto no implica que publicar solo sea menos importante, ni que publicar con muchos autores sea peor.
+
+[**El algoritmo de AuthorRank fue implementado en python, todas las definiciones y fórmulas matemáticas que definen cada aspecto de este algoritmo estan en este link**](https://an-lisis-bibliom-trico-q347mhuyf9j4wxsl9kdf2c.streamlit.app/)
+
+
+A continuación, se presentan los resultados que dió el algoritmo de **AuthorRank**, además,
+aprovechamos de contrastar resultados con las otras medidas de centralidad descritas anteriormente: **Intermediación**, **Cercanía**, **PageRank**.      
+
+Todas estas medidas de centralidad se aplicaron a la totalidad de autores estudiados, es decir que es un grafo de $9393$ nodos, pero la representación del grafo solo muestra
+a los autores con más de 10 artículos, para facilitar la visualización y no alterar los resultados de calcular las centralidades. 
 """)
 
-# mostrar_tabla()
+
 
 # Título de la aplicación
 st.header("Visualización de Grafos de Coautoría de autores con más de 10 artículos")
@@ -214,60 +232,4 @@ with open(html_file, 'r', encoding='utf-8') as f:
 # Mostrar el contenido HTML en Streamlit
 components.html(html_content, height=600)
 
-
-
-st.markdown("""  
-### Algoritmo de Comunidades
-
-Se identificaron 16 comunidades de grandes productores en la red de coautoría. Cada comunidad incluye al menos un autor con una destacada producción científica. Por ejemplo:
-
-- Agustín Ibáñez se encuentra en la comunidad 1.
-- Alfonso Urzúa en la comunidad 2.
-- Felipe García en la comunidad 3.
-- Marianne Krause en la comunidad 4.
-
-Este análisis proporciona una visión profunda de la estructura y la colaboración en la red de coautoría, destacando la importancia de los algoritmos utilizados para comprender mejor la dinámica entre los autores en el campo de estudio.
-""")
-
-
-
-st.header('Comunidades de Autores')
-
-st.markdown("""
-El análisis de comunidades de autores revela lo siguiente:
-
-- Se identificaron 1996 comunidades, de las cuales el 77.7% están compuestas por dos o más autores.
-- Estas comunidades representan el 95.3% de los autores y el 94.3% de los artículos científicos chilenos analizados.
-- El 77.69% de las comunidades con dos o más autores incluyen al menos un autor de afiliación chilena.
-- El grafo de comunidades tiene una densidad de 0.001 y un camino medio de 4.85.
-- La componente más grande agrupa el 60.17% de las comunidades, destacándose la comunidad de Agustín Ibáñez.
-- Se observa una agrupación de comunidades chilenas, con conexiones internacionales destacadas en el centro del grafo.
-
-Estos hallazgos muestran la estructura y distribución de colaboraciones en la red de coautoría, resaltando la presencia significativa de comunidades chilenas y su conexión global en la investigación científica.
-""")
-
-st.header("Grafo de comunidades de autores de mayor productividad - Las primeras 200 comunidades")
-
-# with open('GrafoComunidadAutores.html', 'r', encoding='utf-8') as f:
-#     html_content = f.read()
-
-# components.html(html_content, height=600)
-
-st.header('Red de Comunidades de Grandes Productores')
-
-st.markdown("""
-La red de comunidades de grandes productores muestra la estructura de colaboración entre autores destacados:
-
-- Cada comunidad está liderada por un gran productor.
-- Se observa una diversidad en la conexión de las comunidades, destacándose la centralidad de algunos autores.
-- La presencia de autores con afiliación internacional y su impacto en la red.
-
-Este análisis permite visualizar la distribución y conexiones dentro de la red de coautoría, evidenciando la influencia y colaboración entre autores destacados tanto nacionales como internacionales.
-
-Para este grafo se muestran las primeras 16 comunidades de grandes productores en Chile, donde el mínimo de artículos por autor para estar en el grafo es de 3 artículos
-            """)
-
-# with open('Grafo20Comunidad.html', 'r', encoding='utf-8') as f:
-#     html_content = f.read()
-
-# components.html(html_content, height=600)
+mostrar_tabla()
