@@ -183,12 +183,14 @@ Aquí es cuando aparece el paper [Co-authorship networks in the digital library 
             
 [**AuthorRank**](https://an-lisis-bibliom-trico-q347mhuyf9j4wxsl9kdf2c.streamlit.app/) clasifica a los autores según la calidad e impacto de sus publicaciones y colaboraciones. Basado en el algoritmo PageRank,
 evalúa la influencia de un autor dentro de una red de co-autores, destacando aquellos con conexiones significativas y publicaciones influyentes.
+            
+Este algoritmo fue implementado en python, y permitió aprovechar la información de número de artículos, el número de trabajo en conjunto con otros autores, además, el valor de AuthorRank
+obtenido, fue usado en el **algoritmo de comunidades ABCD**, un algoritmo que veremos más adelante para seguir con el análisis de redes sociales.
+            
+A continuación, se pueden ver las 4 medidas de centralidad: **Intermediación**, **Cercanía**, **PageRank** y **AuthorRank**
 """)
 
-
-
-
-mostrar_tabla()
+# mostrar_tabla()
 
 # Título de la aplicación
 st.header("Visualización de Grafos de Coautoría de autores con más de 10 artículos")
