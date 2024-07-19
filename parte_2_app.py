@@ -162,7 +162,7 @@ st.pyplot(fig)
 st.markdown("""
 Viendo este grafo, ¿Que nodo sería considerado el más importante?, para esto aplicamos el algoritmo de PageRank, que por suerte, la librería Networkx, nos ofrece este algoritmo,        
 """)
-fig, ax = plt.subplots()
+# fig, ax = plt.subplots()
 pagerank = nx.pagerank(G)
 PlotPagerank(G,pagerank)
 
@@ -179,7 +179,10 @@ los autores como **nodos** y la coautoría como **arista**, pero aplicar central
 Entonces podiamos aplicar PageRank, pero tambien nos dejaba con gusto a poco, queriamos aprovechar que teniamos datos como el número de artículos, todas las coautorías de los artículos disponibles,
 la cantidad de coautoía entre autores, etc.
             
-Aquí es cuando aparece paper [Co-authorship networks in the digital library research community](https://www.sciencedirect.com/science/article/abs/pii/S0306457305000336)
+Aquí es cuando aparece el paper [Co-authorship networks in the digital library research community](https://www.sciencedirect.com/science/article/abs/pii/S0306457305000336).
+            
+[**AuthorRank**](https://an-lisis-bibliom-trico-q347mhuyf9j4wxsl9kdf2c.streamlit.app/) clasifica a los autores según la calidad e impacto de sus publicaciones y colaboraciones. Basado en el algoritmo PageRank,
+evalúa la influencia de un autor dentro de una red de co-autores, destacando aquellos con conexiones significativas y publicaciones influyentes.
 """)
 
 
