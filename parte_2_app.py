@@ -233,3 +233,5 @@ with open(html_file, 'r', encoding='utf-8') as f:
 components.html(html_content, height=600)
 
 mostrar_tabla()
+
+st.header("Que chucha pasó !!")
