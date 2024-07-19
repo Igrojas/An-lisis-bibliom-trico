@@ -188,69 +188,31 @@ evalúa la influencia de un autor dentro de una red de co-autores, destacando aq
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-st.header("Análisis de la Estructura del Grafo de Coautoría en Psicología")
-st.markdown("""
-El grafo de coautoría es una representación visual de la colaboración científica entre autores, donde los nodos representan a los autores y las aristas indican la existencia de trabajos científicos en común. 
-
-Al analizar la estructura del grafo de coautoría, se obtuvieron los siguientes resultados:
-
-- **Densidad**: 0.0032
-- **Camino Medio**: 5.50
-
-Se identificaron un total de 662 componentes conexas:
-
-- 506 componentes con la colaboración de dos o más autores, representando el 76.43% del total de autores y responsables del 94.30% de los artículos.
-- 156 componentes compuestas por un solo autor, responsables de 171 artículos, representando el 5.69% del total de artículos.
-
-La componente conexa más grande está formada por 6457 autores, quienes colaboraron en la publicación de artículos científicos:
-
-- Representa el 68.7% del total de autores.
-- Densidad de 0.0064, el doble que la densidad del grafo general.
-- Diámetro de 14.
-- Concentra el 60.60% del total de artículos científicos.
-
-En contraste, la segunda componente más grande consta de 61 autores, representando un 0.65% del total de autores en el grafo.
-
-Estos hallazgos proporcionan una visión detallada de la estructura y la colaboración en la red de coautoría en el campo de la psicología, destacando la diversidad y la distribución de la colaboración entre los investigadores.
-""")
-
-st.header("Análisis de AuthorRank y Comunidades en la Red de Coautoría")
-
-st.markdown("""
-Este análisis se centra en la componente conexa más grande de la red de coautoría, utilizando el algoritmo AuthorRank y el Algoritmo de Comunidades.
-""")
-
-st.markdown("""            
-### [AuthorRank](https://an-lisis-bibliom-trico-q347mhuyf9j4wxsl9kdf2c.streamlit.app/)
-
-Se utilizó el algoritmo AuthorRank para asignar un ranking a cada autor en la red de coautoría. Los tonos más oscuros indican un mayor ranking. 
-Destacan autores como Agustín Ibáñez en el primer lugar de AuthorRank, seguido de Alfonso Urzúa, y similares rangos para Adolfo García, Felipe García y Marianne Krause.
-        
-""")
-
-
 mostrar_tabla()
 
-st.header("Grafo con autores con más de 10 artículos científicos")
+# Título de la aplicación
+st.header("Visualización de Grafos de Coautoría de autores con más de 10 artículos")
 
-with open('GrafoCoautoria.html', 'r', encoding='utf-8') as f:
+# Opciones de selección
+options = {
+    "AuthorRank": "GrafoCoautoria.html",
+    "PageRank": "GrafoCoautoria_pr.html",
+    "Intermediación": "GrafoCoautoria_btw.html",
+    "Cercanía": "GrafoCoautoria_close.html"
+}
+
+# Desplegable para elegir el grafo
+selection = st.selectbox("Selecciona el grafo a visualizar", list(options.keys()))
+
+# Cargar y mostrar el HTML seleccionado
+html_file = options[selection]
+with open(html_file, 'r', encoding='utf-8') as f:
     html_content = f.read()
 
+# Mostrar el contenido HTML en Streamlit
 components.html(html_content, height=600)
+
+
 
 st.markdown("""  
 ### Algoritmo de Comunidades
