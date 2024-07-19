@@ -155,7 +155,7 @@ def generar_df_agrupado_total(salida_articulos, salida_topicos):
 
 def mostrar_tabla():
 
-    centralidad_final = pd.read_excel("data/centralidades.xlsx")
+    centralidad_final = pd.read_excel("data/centralidad_final.xlsx", index_col= 0)
     st.dataframe(centralidad_final)
 
 
