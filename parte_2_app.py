@@ -319,9 +319,10 @@ basándonos en los grandes productores, es decir, autores con 20 o más publicac
 
 Otros aspectos del grafo son los siguientes:
 
-El tamaño del nodo corresponde al número de artículos de cada autor; a más artículos, mayor tamaño del nodo.
-El ancho de la arista representa el total de artículos en conjunto; a más artículos en común, mayor ancho de la arista.
-El tamaño del nombre también es proporcional a la cantidad de artículos de cada autor.
+- El tamaño del nodo corresponde al número de artículos de cada autor; a más artículos, mayor tamaño del nodo.
+- El ancho de la arista representa el total de artículos en conjunto; a más artículos en común, mayor ancho de la arista.
+- El tamaño del nombre también es proporcional a la cantidad de artículos de cada autor.
+            
 A través de los colores y el tamaño del nombre del autor, podemos observar cómo cada gran productor se distribuye en las distintas comunidades. 
 Por ejemplo, es claro el grupo de trabajo del mayor productor en Chile, Agustín Ibañez, junto a Adolfo García y Lucas Sedeño, otros dos grandes productores en Chile.
 
