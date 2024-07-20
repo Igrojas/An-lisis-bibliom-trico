@@ -262,5 +262,74 @@ sería Alfonso Urzúa, Profesor Titular Chileno de la Universidad Católica del 
 """)
 
 
+st.header("Que autor trabaja con quien")
+
+st.markdown("""
+Al observar la red de coautoría, ¿es evidente quién trabaja con quién? En el caso de Agustín Ibáñez, el mayor productor en Chile,
+su desconexión de la red más grande del grafo sugiere claramente que se trata de su propio grupo de trabajo.
+Sin embargo, ¿cómo determinamos los grupos de Alfonso Urzúa o Marianne Krause? Para esto, utilizamos un algoritmo aglomerativo que,
+en función de la cantidad de artículos y el valor de AuthorRank, nos permite identificar cada grupo de trabajo.
+            
+### Detección de Comunidades en Redes Sociales
+
+La detección de comunidades en redes sociales identifica grupos de usuarios altamente conectados que comparten intereses,
+actividades o características similares. Este enfoque es útil para comprender la estructura y dinámica de las redes sociales,
+encontrando conjuntos de usuarios que interactúan más entre sí que con usuarios externos al grupo.
+
+#### Algoritmo de Liu
+
+El algoritmo propuesto por Liu tiene como objetivo encontrar comunidades en redes sociales representadas por grafos ponderados,
+tanto dirigidos como no dirigidos. En términos de grafos, una comunidad se define como un conjunto de nodos agrupados alrededor de unos pocos nodos importantes.
+Estos nodos clave corresponden a investigadores con una mayor cantidad de trabajos y mayor influencia, atrayendo a otros investigadores a trabajar juntos.
+
+Para encontrar estas comunidades, el algoritmo utiliza la información de los pesos de los nodos y las aristas entre ellos.
+Es importante señalar que la definición de peso puede variar según el contexto del problema analizado.
+
+#### Definición del Problema
+
+En este problema, cada nodo o comunidad se asigna un valor de densidad, y cada par de nodos o comunidades recibe un valor de "atractivo".
+La red social se representa como un grafo donde cada nodo es un autor y cada arista representa una relación entre autores. 
+
+Definamos un grafo G(V, E, $W_V$, SE), donde V es el conjunto de nodos, E es el conjunto de aristas, $W_V$ es el conjunto de pesos de los nodos,
+y $S_E$ es el conjunto de pesos de las aristas, el objetivo es dividir un grafo en varios subgrafos o comunidades. 
+Las comunidades candidatas se definen como grupos cuyas sumas de los pesos son mayores que los valores de "atractivo" con otros grupos. Al final del proceso,
+se obtienen varios grupos cuyos atractivos son menores que la suma de los pesos por pares, o una gran comunidad.
+            
+Al contexto del problema, si tengo un autor $u_1$ con $60% artículos científicos, y un peso $w = 5%, lo que estoy diciendo es que para que otro nodo como $u_2$ se junte con
+$u_1$, por lo menos debe tener $5$ artículos científicos. Esto provoca que si llega un autor $u_3$ con $3$ artículos científicos, la regla para unirse a una comunidad no la cumplirá.
+            
+[**Pronto mas detalles del algoritmo de comunidades**]()
+""")
+
+# Cargar y mostrar el HTML seleccionado
+html_file = 'Grafo20Comunidad.html'
+with open(html_file, 'r', encoding='utf-8') as f:
+    html_content = f.read()
+
+# Mostrar el contenido HTML en Streamlit
+components.html(html_content, height=600)
 
 
+st.markdown("""
+Este grafo se construyó de manera similar al anterior para analizar las centralidades. 
+Cada autor es un nodo y las aristas indican la coautoría entre los autores. 
+El ancho de las aristas representa el número de artículos en común. Ahora hemos asignado colores fijos a cada comunidad, 
+de modo que cada comunidad está representada por un color distinto. Además, consideramos las primeras 16 comunidades, 
+basándonos en los grandes productores, es decir, autores con 20 o más publicaciones.
+
+Otros aspectos del grafo son los siguientes:
+
+El tamaño del nodo corresponde al número de artículos de cada autor; a más artículos, mayor tamaño del nodo.
+El ancho de la arista representa el total de artículos en conjunto; a más artículos en común, mayor ancho de la arista.
+El tamaño del nombre también es proporcional a la cantidad de artículos de cada autor.
+A través de los colores y el tamaño del nombre del autor, podemos observar cómo cada gran productor se distribuye en las distintas comunidades. 
+Por ejemplo, es claro el grupo de trabajo del mayor productor en Chile, Agustín Ibañez, junto a Adolfo García y Lucas Sedeño, otros dos grandes productores en Chile.
+
+Es notable el grupo liderado por Roberto González. Más al centro del grafo, vemos la comunidad de Darío Páez, el único gran productor del grupo amarillo.
+
+En el grupo de color cyan, encontramos el grupo de la Universidad de Concepción, con dos grandes productores: Félix Cova y Claudio Bustos, 
+quien fue mi profesor guía en mi memoria de título.
+
+En resumen, cada comunidad cuenta con al menos un gran productor, alguien ya establecido en el área de la investigación. Como detallo en mi memoria de título, 
+estos grupos suelen publicar en al menos dos áreas de investigación en psicología.
+""")
