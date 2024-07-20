@@ -252,7 +252,7 @@ El PageRank muestra resultados similares, liderado por Agustín Ibáñez, seguid
 
 Tanto en AuthorRank como en PageRank, los autores con los mejores resultados coinciden con los mayores productores en psicología chilena.
 
-Los tres principales conectores de la red son Xavier Orial, Alfonso Urzúa y Marianne Krause.
+Los tres principales conectores de la red son Xavier Oriol, Alfonso Urzúa y Marianne Krause.
 
 Los autores más cercanos a otros nodos son Anna Wlodarczyk, Agustín Espinosa, Alfonso Urzúa y Roberto González.
 
