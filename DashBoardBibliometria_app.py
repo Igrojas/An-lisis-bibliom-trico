@@ -31,7 +31,7 @@ with col3:
     st.metric("Autores por paper", round(n_autores_por_paper, 2))
 
 with col4:
-    st.metric("Paper por autores", round(n_autores_por_paper, 2))
+    st.metric("Paper por autores", round(n_paper_por_autores, 2))
 
 st.subheader("Análisis de datos bibliométricos utilizando gráficos interactivos")
 
