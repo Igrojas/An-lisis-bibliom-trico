@@ -298,7 +298,7 @@ se obtienen varios grupos cuyos atractivos son menores que la suma de los pesos 
 Al contexto del problema, si tengo un autor $u_1$ con $60% artículos científicos, y un peso $w = 5%, lo que estoy diciendo es que para que otro nodo como $u_2$ se junte con
 $u_1$, por lo menos debe tener $5$ artículos científicos. Esto provoca que si llega un autor $u_3$ con $3$ artículos científicos, la regla para unirse a una comunidad no la cumplirá.
             
-[**Pronto mas detalles del algoritmo de comunidades**]()
+[**Algoritmo de comunidades ABCD**](https://an-lisis-bibliom-trico-kyyfckvdttyorhfnpog6rs.streamlit.app/)
 """)
 
 # Cargar y mostrar el HTML seleccionado
