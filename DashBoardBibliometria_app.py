@@ -76,3 +76,5 @@ with col5:
     st.altair_chart(grafico_idiomas_por_año, use_container_width=True)
 
 st.altair_chart(grafico_publicaciones_area, use_container_width=True)
+
+
