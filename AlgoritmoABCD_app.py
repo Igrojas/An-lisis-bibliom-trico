@@ -310,3 +310,8 @@ st.write("""Este bloque de código se ejecuta solo si el script se ejecuta como 
           Carga los datos de los autores y el ranking de autores, ejecuta el algoritmo de comunidad para identificar clústeres,
           filtra los clústeres basándose en los autores con mayor número de artículos, y finalmente imprime los resultados.""")
 
+st.markdown("""
+[Código final](https://github.com/Igrojas/Algoritmo-ABCD)
+""")  
+
+
