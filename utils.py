@@ -15,11 +15,7 @@ def principales_indicadores(salida_autores, salida_articulos):
     largo_salida_autores = len(salida_autores)
     n_paper_por_autores = suma_n_paper / largo_salida_autores
 
-    # Mostrar las métricas en el dashboard
-    st.metric("Número de autores", num_autores)
-    st.metric("Número de artículos", num_articulos)
-    st.metric("Autores por paper", round(n_autores_por_paper, 2))  # Redondear a 2 decimales
-    st.metric("Paper por autores", round(n_paper_por_autores, 2))  # Redondear a 2 decimales
+    return num_autores, num_articulos, n_autores_por_paper, n_paper_por_autores
 
 
 def n_articulos_por_autor(salida_autores):

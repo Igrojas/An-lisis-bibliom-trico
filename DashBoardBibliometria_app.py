@@ -14,7 +14,25 @@ salida_authorrank = pd.read_excel("data/salida_AuthorRank.xlsx",index_col= 0)
 
 st.set_page_config(page_title="Dashboard de Bibliometría de psicología en Chile entre los años 2015 a 2020", layout="wide")
 
+
 st.title("Dashboard de Bibliometría de psicología en Chile entre los años 2015 a 2020")
+
+num_autores, num_articulos, n_autores_por_paper, n_paper_por_autores = principales_indicadores(salida_autores, salida_articulos)
+
+col1, col2, col3, col4 = st.columns(4)
+
+with col1:
+    st.metric("Número de autores", num_autores)
+
+with col2:
+    st.metric("Número de artículos", num_articulos)
+
+with col3:
+    st.metric("Autores por paper", round(n_autores_por_paper, 2))
+
+with col4:
+    st.metric("Paper por autores", round(n_autores_por_paper, 2))
+
 st.subheader("Análisis de datos bibliométricos utilizando gráficos interactivos")
 
 top_autores = n_articulos_por_autor(salida_autores)
