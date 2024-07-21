@@ -3,18 +3,24 @@ import pandas as pd
 import json
 
 def principales_indicadores(salida_autores, salida_articulos):
-    st.write("Número de autores:", len(salida_autores))
-    st.write("Número de artículos:", len(salida_articulos))
+    # Cálculo de los indicadores
+    num_autores = len(salida_autores)
+    num_articulos = len(salida_articulos)
 
     suma_n_autores = salida_articulos["n_authors"].sum()
     largo_salida_articulos = len(salida_articulos)
     n_autores_por_paper = suma_n_autores / largo_salida_articulos
-    st.write("Autores por paper:", n_autores_por_paper)
 
     suma_n_paper = salida_autores["n_articles_total"].sum()
     largo_salida_autores = len(salida_autores)
     n_paper_por_autores = suma_n_paper / largo_salida_autores
-    st.write("Paper por autores:", n_paper_por_autores)
+
+    # Mostrar las métricas en el dashboard
+    st.metric("Número de autores", num_autores)
+    st.metric("Número de artículos", num_articulos)
+    st.metric("Autores por paper", round(n_autores_por_paper, 2))  # Redondear a 2 decimales
+    st.metric("Paper por autores", round(n_paper_por_autores, 2))  # Redondear a 2 decimales
+
 
 def n_articulos_por_autor(salida_autores):
     autores_por_paper = salida_autores.sort_values(by=['n_articles_total'], ascending=False)
