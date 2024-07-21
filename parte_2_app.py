@@ -301,6 +301,8 @@ $u_1$, por lo menos debe tener $5$ artículos científicos. Esto provoca que si 
 [**Algoritmo de comunidades ABCD**](https://an-lisis-bibliom-trico-kyyfckvdttyorhfnpog6rs.streamlit.app/)
 """)
 
+
+
 # Cargar y mostrar el HTML seleccionado
 html_file = 'Grafo20Comunidad.html'
 with open(html_file, 'r', encoding='utf-8') as f:
