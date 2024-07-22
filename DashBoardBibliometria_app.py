@@ -154,3 +154,6 @@ y Psicometría, con un crecimiento del 7,16 %. Estos resultados reflejan las dif
 st.altair_chart(grafico_publicaciones_area, use_container_width=True)
 
 
+
+
+
