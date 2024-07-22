@@ -16,6 +16,11 @@ st.set_page_config(page_title="Estudio Bibliométrico de la Actividad Científic
 
 st.title("Estudio Bibliométrico de la Actividad Científica en Psicología en Chile (2015-2020)")
 
+st.markdown("""
+**Los resultados que se presentan a continuación corres ponden a los obtenidso en mi memoria de titulo llamada Estudio Bibliométrico de las Redes de Coautoría de la Literatura en Psicología de Chile en el Período 2015-2020
+para el Proyecto FONDECYT Regular 1201681**
+""")
+
 st.write("""
 El objetivo de este proyecto es realizar un estudio bibliométrico de la actividad científica en psicología en Chile durante el período de 2015 a 2020. 
 Utilizando datos de las reconocidas bases de datos Scielo, Scopus y WoS, este análisis se enfoca en la productividad y las redes sociales basadas en la coautoría.
@@ -41,7 +46,12 @@ El análisis bibliométrico realizado ofrece valiosa información para la comuni
 facilitando la planificación de estrategias futuras en el ámbito de la investigación en psicología.
 """)
 
+st.write("""  
+-------------------------------------------
+""")
 
+st.header("""
+A continuación se muestran los principales indicadores bibliométricos""")
 
 num_autores, num_articulos, n_autores_por_paper, n_paper_por_autores = principales_indicadores(salida_autores, salida_articulos)
 
@@ -59,7 +69,17 @@ with col3:
 with col4:
     st.metric("Paper por autores", round(n_paper_por_autores, 2))
 
-st.subheader("Análisis de datos bibliométricos utilizando gráficos interactivos")
+st.header("Análisis de datos bibliométricos utilizando gráficos interactivos")
+
+st.subheader("Análisis de Productores, Afiliaciones y Revistas Más Productivas")
+st.write("""
+Entre los mayores productores con afiliación chilena, Agustín Ibáñez encabeza la lista con 60 artículos científicos, de los cuales 59 están firmados por Chile. En segundo lugar se encuentra Adolfo García, con 38 artículos científicos, de los cuales 9 están firmados por Chile. El primer chileno en la lista es Alfonso Urzúa, en tercer lugar, con 36 artículos, todos ellos firmados por Chile.
+
+La Pontificia Universidad Católica de Chile se sitúa en el primer lugar del ranking de afiliaciones más productivas, con 637 artículos científicos, seguida por la Universidad de Chile con 462 artículos. Ambas instituciones representan el 36% de la producción científica del país.
+
+Tres revistas principales se destacan por tener más de 100 artículos, superando al resto de las revistas. En primer lugar, encontramos Frontiers in Psychology, una revista de origen suizo, que lidera con el 31% de las publicaciones. En segundo lugar, está la revista chilena Psicoperspectivas, con el 21% de las publicaciones. Finalmente, la revista Universitas Psychologica representa el 18,24% de las publicaciones.
+""")
+
 
 top_autores = n_articulos_por_autor(salida_autores)
 filiaciones_ordenadas = paper_por_filiacion(salida_filiaciones)
@@ -80,9 +100,18 @@ with col2:
 with col3:
     st.altair_chart(grafico_revistas, use_container_width=True)
 
-st.markdown("""
-    ### Artículos por año y proporción de artículos en ingles y español por año
+
+st.subheader("Incremento en la Productividad Científica")
+st.write("""
+En los últimos años, se ha observado un notable incremento en la productividad científica en Chile, 
+con un aumento promedio anual del 10,46 %. El año 2020 destacó por alcanzar el mayor número de publicaciones, con un total de 657 artículos. 
+En contraste, los años 2015 y 2016 tuvieron la menor productividad, con un total de 404 artículos publicados en cada año.
+
+Este aumento en la productividad se ha reflejado tanto en publicaciones en español como en inglés. 
+Sin embargo, se ha observado un ligero incremento en las publicaciones en español, con un aumento anual del 3,61 %. 
+Por otro lado, las publicaciones en inglés han mostrado un crecimiento anual del 16,09 %, representando un incremento significativamente mayor en comparación con las publicaciones en español.
 """)
+
 
 frecuencia_por_año = paper_por_año(salida_articulos)
 df_resultado = prop_idiomas_por_año(salida_articulos)
@@ -106,12 +135,21 @@ grafico_publicaciones_area = crear_grafico_publicaciones_area(df_agrupado_total)
 
 col4, col5 = st.columns(2)
 
-# Mostrar los gráficos en las columnas
 with col4:
     st.altair_chart(grafico_articulos_por_año, use_container_width=True)
 
 with col5:
     st.altair_chart(grafico_idiomas_por_año, use_container_width=True)
+
+st.subheader("Crecimiento por Áreas de la Psicología")
+st.write("""
+Las áreas de la psicología que experimentaron los mayores aumentos en la cantidad de artículos fueron Psicología del trabajo y organizaciones, 
+con una tasa de crecimiento anual promedio del 18,04 %, seguida de Psicología evolutiva y educacional, con un crecimiento del 15,20 %. 
+
+Por otro lado, las áreas que mostraron los menores aumentos fueron Psicoterapia, con una tasa de crecimiento anual promedio del 3,47 %, 
+y Psicometría, con un crecimiento del 7,16 %. Estos resultados reflejan las diferencias en el crecimiento promedio entre las distintas áreas de la psicología durante el período analizado.
+""")
+
 
 st.altair_chart(grafico_publicaciones_area, use_container_width=True)
 
