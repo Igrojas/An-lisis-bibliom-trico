@@ -70,7 +70,7 @@ def crear_grafico_idiomas_por_año(df_resultado):
         y=alt.Y('value:Q', title='Número de artículos'),
         color=alt.Color('variable:N', title='Serie')
     ).transform_fold(
-        ['Art_es', 'Art_en'],
+        ['Artículos español', 'Artículos inglés'],
         as_=['variable', 'value']
     ).properties(
         title='Tendencia de publicación de artículos en español e inglés',
