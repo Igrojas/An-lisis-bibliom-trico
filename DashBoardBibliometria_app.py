@@ -67,7 +67,9 @@ st.header("Análisis de datos bibliométricos utilizando gráficos interactivos"
 st.subheader("Análisis de Productores, Afiliaciones y Revistas Más Productivas")
 st.write("""
 Entre los mayores productores con afiliación chilena, Agustín Ibáñez encabeza la lista con 60 artículos científicos, de los cuales 59 están firmados por investigadores chilenos. En segundo lugar se encuentra Adolfo García, con 38 artículos científicos, de los cuales 9 están firmados por investigadores chilenos. El primer investigador chileno en la lista es Alfonso Urzúa, en tercer lugar, con 36 artículos, todos ellos firmados por investigadores chilenos.
+
 La Pontificia Universidad Católica de Chile se sitúa en el primer lugar del ranking de afiliaciones más productivas, con 637 artículos científicos, seguida por la Universidad de Chile con 462 artículos. Ambas instituciones representan el 36% de la producción científica del país.
+
 Tres revistas principales se destacan por tener más de 100 artículos, superando al resto de las revistas. En primer lugar, encontramos Frontiers in Psychology, una revista de origen suizo, que lidera con el 31% de las publicaciones. En segundo lugar, está la revista chilena Psicoperspectivas, con el 21% de las publicaciones. Finalmente, la revista Universitas Psychologica representa el 18,24% de las publicaciones.
 """)
 
