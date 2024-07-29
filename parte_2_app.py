@@ -6,22 +6,22 @@ import matplotlib.pyplot as plt
 import networkx as nx
 from grafos import *
 
-st.title("""Análisis de Redes de Sociales""")
+st.title("""Análisis de Redes Sociales""")
 st.header("Redes de Coautoría")
 
-st.markdown(""" 
+st.markdown("""
 Cuando analizamos redes sociales, es interesante ver que nodos son más "importantes" en una red, esto es responder a las preguntas:
-- ¿Cuales son los nodos con mas conexiones en al red?
-- ¿Por cual nodo tengo que pasar para llegar de un nodo a otro pasando por la menor cantidad de nodos?
-- ¿Cual es el nodo que poseé los caminos mas cortos para llegar a otros nodos, es decir el nodo mas cercano a los otros nodos?
-            
-Estas 3 respuestas tiene un nombre, **CENTRALIDAD**, que para cada respuesta en especifico nos encontramos con:
+- ¿Cuáles son los nodos con más conexiones en la red?
+- ¿Por cuál nodo tengo que pasar para llegar de un nodo a otro pasando por la menor cantidad de nodos?
+- ¿Cuál es el nodo que posee los caminos más cortos para llegar a otros nodos, es decir el nodo más cercano a los otros nodos?
+
+Estas 3 respuestas tienen un nombre, **CENTRALIDAD**, que para cada respuesta en especifico nos encontramos con:
 - Centralidad de Grado
-- Centralidad de intermediacón
-- Centralidad de cercanía
-            
+- Centralidad de Intermediación
+- Centralidad de Cercanía
+
 Por lo que para aplicar estos conceptos, necesitamos saber a que estructura matemática son aplicables, para ello veamos que es un **GRAFO**
-              """)
+""")
 
 st.header("¿Qué es un Grafo?")
 
@@ -39,47 +39,43 @@ Se representa matemáticamente como $G = (V, E) $, donde:
 
 Para el caso de una red social, podemos considerar un grafo no dirigido, o un grafo dirigido, otro grafo ponderado o el grafo bipartito,
 todo dependerá del tipo de problemas que estemos analizando.
-            
+
 ### Ejemplos de cada uno de los grafos:
 """)
 
 EjemploDeGrafos()
 
-
-
-
 st.markdown("""
 Los grafos son una herramienta fundamental en la teoría de redes y tienen aplicaciones extensas en diversas áreas del conocimiento y la tecnología.
 """)
 
-
-st.header("Apliquemos las centralidades")
+st.header("Aplicemos las centralidades")
 
 st.markdown("""
-Consideremos el siguiente grafo no dirido y respondamos a las 3 preguntas que teniamos el inicio
-- ¿Cuales son los nodos con mas conexiones en al red?
-- ¿Por cual nodo tengo que pasar para llegar de un nodo a otro pasando por la menor cantidad de nodos?
-- ¿Cual es el nodo que poseé los caminos mas cortos para llegar a otros nodos, es decir el nodo mas cercano a los otros nodos?
-            """)
+Consideremos el siguiente grafo no dirigido y respondamos a las 3 preguntas que teníamos al inicio:
+- ¿Cuáles son los nodos con más conexiones en la red?
+- ¿Por cuál nodo tengo que pasar para llegar de un nodo a otro pasando por la menor cantidad de nodos?
+- ¿Cuál es el nodo que posee los caminos más cortos para llegar a otros nodos, es decir, el nodo más cercano a los otros nodos?
+""")
+
 G = GrafoCentralidad()
 
 st.markdown("""
-Primero debemos conocer que es cada centralidad y como se calculan 
+Primero debemos conocer qué es cada centralidad y cómo se calculan.
 
 **Centralidad de Grado:** La centralidad de grado mide la cantidad de conexiones directas que tiene un nodo en una red.
-Si eligo un nodo al azar del grafo, es muy probable que este nodo este conectado con el nodo con mayor centralidad de grado.
+Si elijo un nodo al azar del grafo, es muy probable que este nodo esté conectado con el nodo con mayor centralidad de grado.
 
-Lo único que necesitamos para saber la centralidad de grado de un nodo es cuantas aristas tiene ese nodo, entonces diremos que
-$grado(v)$ va ser el total de aristas de un nodo $v$, y para todo nodo $u \in V$
+Lo único que necesitamos para saber la centralidad de grado de un nodo es cuántas aristas tiene ese nodo, entonces diremos que
+$grado(v)$ va a ser el total de aristas de un nodo $v$, y para todo nodo $u \in V$
 """)
 
 st.latex(r''' 
 C_D(u) = \text{grado}(u) 
 ''')
-
 st.markdown("""
 **Centralidad de Intermediación:** La centralidad de intermediación mide cuántas veces un nodo actúa como un puente a lo largo del camino más corto entre dos otros nodos.
-Estos nodos con alta centralidad, son los que sostienen la red unida, si eliminamos ese nodo, perdemos muchos caminos que unen otros nodos.
+Estos nodos con alta centralidad son los que sostienen la red unida; si eliminamos ese nodo, perdemos muchos caminos que unen otros nodos.
 """)
 
 st.latex(r'''
@@ -87,13 +83,14 @@ C_B(u) = \sum_{s \neq v \neq t} \frac{\sigma_{st}(u)}{\sigma_{st}}
 ''')
 
 st.markdown("""
-Donde $\sigma_{st}$ son todos los caminos que unen al nodo $s$ con el nodo $t$, y $\sigma_{st}(u)$ son todos los caminos que pasan por $u$
+Donde $\sigma_{st}$ son todos los caminos que unen al nodo $s$ con el nodo $t$, y $\sigma_{st}(u)$ son todos los caminos que pasan por $u$.
 """)
 
 st.markdown("""
 **Centralidad de Cercanía:** La centralidad de cercanía mide cuán cerca está un nodo de todos los demás nodos en la red. 
-Este nodo es capaz de llegar a todos los nodos en más rápido que cualquier otro nodo.
+Este nodo es capaz de llegar a todos los nodos más rápidamente que cualquier otro nodo.
 """)
+
 st.latex(r'''
 C_C(u) = \frac{1}{\sum_{v \in V} d(u, v)}
 ''')
@@ -103,11 +100,11 @@ Donde $d(u,v)$ es la distancia más corta entre los nodos $u$ y $v$, y $V$ es el
 """)
 
 st.markdown("""
-Ahora que ya sabemos que es cada centralidad y como calcular cada centralidad, usamos la libreria netwrokX que además de permitir
-dibujar los grafo, ofrece las funciones para calcular las 3 centralidades.
-            
-Una vez que se calculan, se puede representar la centralidad del nodo a través del tamaño del nodo, donde el nodo mas grande es el nodo mas central,
-tambien podemos identificar el valor de cada centralidad a través de colores, que es como se presenta en la siguiente figura.
+Ahora que ya sabemos qué es cada centralidad y cómo calcular cada centralidad, usamos la librería NetworkX que, además de permitir 
+dibujar los grafos, ofrece las funciones para calcular las 3 centralidades.
+
+Una vez que se calculan, se puede representar la centralidad del nodo a través del tamaño del nodo, donde el nodo más grande es el nodo más central.
+También podemos identificar el valor de cada centralidad a través de colores, que es como se presenta en la siguiente figura.
 """)
 
 
@@ -128,27 +125,20 @@ PlotCentralidad(G, axs[2], centrality, 'Centralidad de Cercanía', 'Centralidad 
 # Ajustar los layouts para que no se sobrepongan
 plt.tight_layout()
 st.pyplot(fig)
-
 st.markdown("""
-El primer grafo de la imágen corresponde a la centralidad de grado, donde los nodos mas centrales fueron el nodo $14$ y el nodo $6$, estos son los nodos
-con mayor aristas en la red.
-            
-En el segundo grafo, que corresponde a la centralidad de intermediacón, vemos que el nodo por donde pasan la mayor cantidad de caminos más cortos es el nodo $6$, 
-que de acuerdo a la red, si queremos llegar de un nodo a otro, es muy probable que debamos pasar por el nodo $6$.
-            
-El último grafo, que corresponde a la centralidad de cercanía, vemos nuevamente al nodo $14$, lo que indica que este nodo $14$ tiene los caminos más cortos para llegar a cualquier otro nodo
-del grafo, seguido del nodo $6$, que tambien es muy cercano a los otros nodos, pero en su caso, tendría que recorrer algunas aristas más.
+El primer grafo de la imagen corresponde a la centralidad de grado, donde los nodos más centrales fueron el nodo $14$ y el nodo $6$, estos son los nodos con mayor número de aristas en la red.
+
+En el segundo grafo, que corresponde a la centralidad de intermediación, vemos que el nodo por donde pasan la mayor cantidad de caminos más cortos es el nodo $6$, que de acuerdo a la red, si queremos llegar de un nodo a otro, es muy probable que debamos pasar por el nodo $6$.
+
+El último grafo, que corresponde a la centralidad de cercanía, vemos nuevamente al nodo $14$, lo que indica que este nodo $14$ tiene los caminos más cortos para llegar a cualquier otro nodo del grafo, seguido del nodo $6$, que también es muy cercano a los otros nodos, pero en su caso, tendría que recorrer algunas aristas más.
 """)
 
 st.header("Grafo Dirigido")
 
 st.markdown("""
-¿Que pasa ahora si el grafo fuera digirido?, ¿Importa de donde que nodo sale una aristas?, ¿Importa a que nodo llega una arista?. Para responder estas preguntas,
-exsite un algoritmo llamado **PageRank**.
-            
-PageRank es un algoritmo originalmente creado por Google para su motor de
-búsqueda. Se basa en la idea de que el valor de una página web se puede medir en
-función del número y calidad de los hipervínculos que apuntan hacia ella.
+¿Qué pasa ahora si el grafo fuera dirigido?, ¿Importa de qué nodo sale una arista?, ¿Importa a qué nodo llega una arista?. Para responder estas preguntas, existe un algoritmo llamado **PageRank**.
+
+PageRank es un algoritmo originalmente creado por Google para su motor de búsqueda. Se basa en la idea de que el valor de una página web se puede medir en función del número y calidad de los hipervínculos que apuntan hacia ella.
 """)
 
 G = GrafoDirigidoEjemplo()
@@ -160,52 +150,39 @@ ax.set_title('Grafo Dirigido de Ejemplo', fontsize=16)
 st.pyplot(fig)
 
 st.markdown("""
-Viendo este grafo, ¿Que nodo sería considerado el más importante?, para esto aplicamos el algoritmo de PageRank, que por suerte, la librería Networkx, nos ofrece este algoritmo,        
+Viendo este grafo, ¿qué nodo sería considerado el más importante?, para esto aplicamos el algoritmo de PageRank, que por suerte, la librería NetworkX nos ofrece este algoritmo.
 """)
 # fig, ax = plt.subplots()
 pagerank = nx.pagerank(G)
 PlotPagerank(G,pagerank)
-
 st.markdown("""
-De acuerdo con el algoritmo de PageRank, el nodo mas "importante" de la red es el nodo $14$, el cual es el nodo que otros nodos "importantes" apuntan,
-seguido del nodo $13$ y el nodo $9$""")
+De acuerdo con el algoritmo de PageRank, el nodo más "importante" de la red es el nodo $14$, el cual es el nodo que otros nodos "importantes" apuntan, seguido del nodo $13$ y el nodo $9$.
+""")
 
-st.header("Entonces, de que va mi memoria de título")
+st.header("Entonces, ¿de qué va mi memoria de título?")
 
 st.markdown("""
 **Red de Coautoría y Medidas de Centralidad**
 
-Con todos los datos sobre autores y artículos científicos presentados en la parte 1, queríamos construir una red de coautoría donde los autores son **nodos** y las coautorías son
- **aristas**. Aplicar centralidad de grado o cercanía resultaba muy básico debido a la cantidad de datos disponibles.
+Con todos los datos sobre autores y artículos científicos presentados en la parte 1, queríamos construir una red de coautoría donde los autores son **nodos** y las coautorías son **aristas**. Aplicar centralidad de grado o cercanía resultaba muy básico debido a la cantidad de datos disponibles.
 
-Exploramos el uso de PageRank, pero necesitábamos algo más robusto. Aprovechando datos como el número de artículos, coautorías,
-y la intensidad de colaboración entre autores, implementamos el algoritmo **AuthorRank**, descrito en el artículo
-[Co-authorship networks in the digital library research community](https://www.sciencedirect.com/science/article/abs/pii/S0306457305000336).
+Exploramos el uso de PageRank, pero necesitábamos algo más robusto. Aprovechando datos como el número de artículos, coautorías, y la intensidad de colaboración entre autores, implementamos el algoritmo **AuthorRank**, descrito en el artículo [Co-authorship networks in the digital library research community](https://www.sciencedirect.com/science/article/abs/pii/S0306457305000336).
 
 ### AuthorRank
-            
-[**AuthorRank**](https://an-lisis-bibliom-trico-q347mhuyf9j4wxsl9kdf2c.streamlit.app/) clasifica a los autores según la calidad e impacto de sus publicaciones y colaboraciones,
-evaluando su influencia dentro de la red de coautores. Este algoritmo, implementado en Python, permitió utilizar información detallada sobre artículos y coautorías,
-y sus resultados se aplicaron en el **algoritmo de comunidades ABCD** para un análisis más profundo.
 
-Necesitamos un grafo dirigido con pesos para aplicar el algoritmo de AuthorRank, entonces definimos un grafo $G = (V,E,W)$, donde $V$ es el conjunto de nodos, $E$ el conjunto de aristas
-y $W$ el conjunto de pesos $w$, estos pesos $w$ se asignan a cada arista que une un par de nodos $(v_i,v_j)$. Hay que definir que valor va tomar cada peso $w$ de la red, como se 
-van a calcular, y que significado tiene en la red.
-            
+[**AuthorRank**](https://an-lisis-bibliom-trico-q347mhuyf9j4wxsl9kdf2c.streamlit.app/) clasifica a los autores según la calidad e impacto de sus publicaciones y colaboraciones, evaluando su influencia dentro de la red de coautores. Este algoritmo, implementado en Python, permitió utilizar información detallada sobre artículos y coautorías, y sus resultados se aplicaron en el **algoritmo de comunidades ABCD** para un análisis más profundo.
+
+Necesitamos un grafo dirigido con pesos para aplicar el algoritmo de AuthorRank, entonces definimos un grafo $G = (V,E,W)$, donde $V$ es el conjunto de nodos, $E$ el conjunto de aristas y $W$ el conjunto de pesos $w$, estos pesos $w$ se asignan a cada arista que une un par de nodos $(v_i,v_j)$. Hay que definir qué valor va a tomar cada peso $w$ de la red, cómo se van a calcular, y qué significado tiene en la red.
+
 #### Peso de las Aristas en la Red de Coautoría
 
-¿En qué casos el valor de $w$ será alto o bajo? Esto debe definirse. ¿Podemos asignar un valor alto de $w$ entre dos autores que publican frecuentemente juntos? Sí.
-¿Podemos asignar un valor bajo a la arista entre dos autores que comparten un artículo con muchos coautores? Sí.
-Esto no implica que publicar solo sea menos importante, ni que publicar con muchos autores sea peor.
+¿En qué casos el valor de $w$ será alto o bajo? Esto debe definirse. ¿Podemos asignar un valor alto de $w$ entre dos autores que publican frecuentemente juntos? Sí. ¿Podemos asignar un valor bajo a la arista entre dos autores que comparten un artículo con muchos coautores? Sí. Esto no implica que publicar solo sea menos importante, ni que publicar con muchos autores sea peor.
 
-[**El algoritmo de AuthorRank fue implementado en python, todas las definiciones y fórmulas matemáticas que definen cada aspecto de este algoritmo estan en este link**](https://an-lisis-bibliom-trico-q347mhuyf9j4wxsl9kdf2c.streamlit.app/)
+[**El algoritmo de AuthorRank fue implementado en Python, todas las definiciones y fórmulas matemáticas que definen cada aspecto de este algoritmo están en este link**](https://an-lisis-bibliom-trico-q347mhuyf9j4wxsl9kdf2c.streamlit.app/)
 
+A continuación, se presentan los resultados que dio el algoritmo de **AuthorRank**, además, aprovechamos de contrastar resultados con las otras medidas de centralidad descritas anteriormente: **Intermediación**, **Cercanía**, **PageRank**.
 
-A continuación, se presentan los resultados que dió el algoritmo de **AuthorRank**, además,
-aprovechamos de contrastar resultados con las otras medidas de centralidad descritas anteriormente: **Intermediación**, **Cercanía**, **PageRank**.      
-
-Todas estas medidas de centralidad se aplicaron a la totalidad de autores estudiados, es decir que es un grafo de $9393$ nodos, pero la representación del grafo solo muestra
-a los autores con más de 10 artículos, para facilitar la visualización y no alterar los resultados de calcular las centralidades. 
+Todas estas medidas de centralidad se aplicaron a la totalidad de autores estudiados, es decir que es un grafo de $9393$ nodos, pero la representación del grafo solo muestra a los autores con más de 10 artículos, para facilitar la visualización y no alterar los resultados de calcular las centralidades.
 """)
 
 
@@ -234,17 +211,15 @@ components.html(html_content, height=600)
 
 mostrar_tabla()
 
-
 st.markdown("""
-
 Este grafo de coautoría está construido a partir de autores en psicología con al menos una afiliación chilena entre 2015 y 2020.
 Los nodos representan a los autores y las aristas indican coautorías, es decir, si trabajaron juntos en un artículo. Las particularidades del grafo son las siguientes:
 
 - El tamaño del nodo corresponde al número de artículos de cada autor; más artículos, nodo más grande.
-- El ancho de la arista representa el total de artículos en conjunto; más artículos en común, arista más anchas.
+- El ancho de la arista representa el total de artículos en conjunto; más artículos en común, arista más ancha.
 - El tamaño del nombre también es proporcional a la cantidad de artículos de cada autor.
 - El gradiente de colores muestra en un color más claro el valor más alto de centralidad calculada.
- 
+
 En los resultados de AuthorRank, Agustín Ibáñez ocupa el primer lugar, seguido de Alfonso Urzúa, Adolfo García, Felipe García y Marianne Krause,
 quienes tienen un AuthorRank similar.
 
@@ -258,49 +233,34 @@ Los autores más cercanos a otros nodos son Anna Wlodarczyk, Agustín Espinosa, 
 
 Si tuviéramos que elegir un autor "importante" que produzca muchos artículos, colabore ampliamente, tenga una gran intermediación en la red y sea cercano a otros autores,
 sería Alfonso Urzúa, Profesor Titular Chileno de la Universidad Católica del Norte en Antofagasta, Chile.
-
 """)
-
-
-st.header("Que autor trabaja con quien")
+st.header("¿Qué autor trabaja con quién?")
 
 st.markdown("""
-Al observar la red de coautoría, ¿es evidente quién trabaja con quién? En el caso de Agustín Ibáñez, el mayor productor en Chile,
-su desconexión de la red más grande del grafo sugiere claramente que se trata de su propio grupo de trabajo.
-Sin embargo, ¿cómo determinamos los grupos de Alfonso Urzúa o Marianne Krause? Para esto, utilizamos un algoritmo aglomerativo que,
-en función de la cantidad de artículos y el valor de AuthorRank, nos permite identificar cada grupo de trabajo.
-            
+Al observar la red de coautoría, ¿es evidente quién trabaja con quién? En el caso de Agustín Ibáñez, el mayor productor en Chile, su desconexión de la red más grande del grafo sugiere claramente que se trata de su propio grupo de trabajo. Sin embargo, ¿cómo determinamos los grupos de Alfonso Urzúa o Marianne Krause? Para esto, utilizamos un algoritmo aglomerativo que, en función de la cantidad de artículos y el valor de AuthorRank, nos permite identificar cada grupo de trabajo.
+
 ### Detección de Comunidades en Redes Sociales
 
-La detección de comunidades en redes sociales identifica grupos de usuarios altamente conectados que comparten intereses,
-actividades o características similares. Este enfoque es útil para comprender la estructura y dinámica de las redes sociales,
-encontrando conjuntos de usuarios que interactúan más entre sí que con usuarios externos al grupo.
+La detección de comunidades en redes sociales identifica grupos de usuarios altamente conectados que comparten intereses, actividades o características similares. Este enfoque es útil para comprender la estructura y dinámica de las redes sociales, encontrando conjuntos de usuarios que interactúan más entre sí que con usuarios externos al grupo.
 
 #### Algoritmo de Liu
 
-El algoritmo propuesto por Liu tiene como objetivo encontrar comunidades en redes sociales representadas por grafos ponderados,
-tanto dirigidos como no dirigidos. En términos de grafos, una comunidad se define como un conjunto de nodos agrupados alrededor de unos pocos nodos importantes.
-Estos nodos clave corresponden a investigadores con una mayor cantidad de trabajos y mayor influencia, atrayendo a otros investigadores a trabajar juntos.
+El algoritmo propuesto por Liu tiene como objetivo encontrar comunidades en redes sociales representadas por grafos ponderados, tanto dirigidos como no dirigidos. En términos de grafos, una comunidad se define como un conjunto de nodos agrupados alrededor de unos pocos nodos importantes. Estos nodos clave corresponden a investigadores con una mayor cantidad de trabajos y mayor influencia, atrayendo a otros investigadores a trabajar juntos.
 
-Para encontrar estas comunidades, el algoritmo utiliza la información de los pesos de los nodos y las aristas entre ellos.
-Es importante señalar que la definición de peso puede variar según el contexto del problema analizado.
+Para encontrar estas comunidades, el algoritmo utiliza la información de los pesos de los nodos y las aristas entre ellos. Es importante señalar que la definición de peso puede variar según el contexto del problema analizado.
 
 #### Definición del Problema
 
-En este problema, cada nodo o comunidad se asigna un valor de densidad, y cada par de nodos o comunidades recibe un valor de "atractivo".
-La red social se representa como un grafo donde cada nodo es un autor y cada arista representa una relación entre autores. 
+En este problema, cada nodo o comunidad se asigna un valor de densidad, y cada par de nodos o comunidades recibe un valor de "atractivo". La red social se representa como un grafo donde cada nodo es un autor y cada arista representa una relación entre autores.
 
-Definamos un grafo G(V, E, $W_V$, SE), donde V es el conjunto de nodos, E es el conjunto de aristas, $W_V$ es el conjunto de pesos de los nodos,
-y $S_E$ es el conjunto de pesos de las aristas, el objetivo es dividir un grafo en varios subgrafos o comunidades. 
-Las comunidades candidatas se definen como grupos cuyas sumas de los pesos son mayores que los valores de "atractivo" con otros grupos. Al final del proceso,
-se obtienen varios grupos cuyos atractivos son menores que la suma de los pesos por pares, o una gran comunidad.
-            
-Al contexto del problema, si tengo un autor $u_1$ con $60% artículos científicos, y un peso $w = 5%, lo que estoy diciendo es que para que otro nodo como $u_2$ se junte con
-$u_1$, por lo menos debe tener $5$ artículos científicos. Esto provoca que si llega un autor $u_3$ con $3$ artículos científicos, la regla para unirse a una comunidad no la cumplirá.
-            
+Definamos un grafo G(V, E, $W_V$, $S_E$), donde V es el conjunto de nodos, E es el conjunto de aristas, $W_V$ es el conjunto de pesos de los nodos, y $S_E$ es el conjunto de pesos de las aristas, el objetivo es dividir un grafo en varios subgrafos o comunidades.
+
+Las comunidades candidatas se definen como grupos cuyas sumas de los pesos son mayores que los valores de "atractivo" con otros grupos. Al final del proceso, se obtienen varios grupos cuyos atractivos son menores que la suma de los pesos por pares, o una gran comunidad.
+
+Al contexto del problema, si tengo un autor $u_1$ con $60%$ artículos científicos, y un peso $w = 5%$, lo que estoy diciendo es que para que otro nodo como $u_2$ se junte con $u_1$, por lo menos debe tener $5$ artículos científicos. Esto provoca que si llega un autor $u_3$ con $3$ artículos científicos, la regla para unirse a una comunidad no la cumplirá.
+
 [**Algoritmo de comunidades ABCD**](https://an-lisis-bibliom-trico-kyyfckvdttyorhfnpog6rs.streamlit.app/)
 """)
-
 
 
 # Cargar y mostrar el HTML seleccionado
@@ -311,28 +271,20 @@ with open(html_file, 'r', encoding='utf-8') as f:
 # Mostrar el contenido HTML en Streamlit
 components.html(html_content, height=600)
 
-
 st.markdown("""
-Este grafo se construyó de manera similar al anterior para analizar las centralidades. 
-Cada autor es un nodo y las aristas indican la coautoría entre los autores. 
-El ancho de las aristas representa el número de artículos en común. Ahora hemos asignado colores fijos a cada comunidad, 
-de modo que cada comunidad está representada por un color distinto. Además, consideramos las primeras 16 comunidades, 
-basándonos en los grandes productores, es decir, autores con 20 o más publicaciones.
+Este grafo se construyó de manera similar al anterior para analizar las centralidades. Cada autor es un nodo y las aristas indican la coautoría entre los autores. El ancho de las aristas representa el número de artículos en común. Ahora hemos asignado colores fijos a cada comunidad, de modo que cada comunidad está representada por un color distinto. Además, consideramos las primeras 16 comunidades, basándonos en los grandes productores, es decir, autores con 20 o más publicaciones.
 
 Otros aspectos del grafo son los siguientes:
 
 - El tamaño del nodo corresponde al número de artículos de cada autor; a más artículos, mayor tamaño del nodo.
 - El ancho de la arista representa el total de artículos en conjunto; a más artículos en común, mayor ancho de la arista.
 - El tamaño del nombre también es proporcional a la cantidad de artículos de cada autor.
-            
-A través de los colores y el tamaño del nombre del autor, podemos observar cómo cada gran productor se distribuye en las distintas comunidades. 
-Por ejemplo, es claro el grupo de trabajo del mayor productor en Chile, Agustín Ibañez, junto a Adolfo García y Lucas Sedeño, otros dos grandes productores en Chile.
+
+A través de los colores y el tamaño del nombre del autor, podemos observar cómo cada gran productor se distribuye en las distintas comunidades. Por ejemplo, es claro el grupo de trabajo del mayor productor en Chile, Agustín Ibáñez, junto a Adolfo García y Lucas Sedeño, otros dos grandes productores en Chile.
 
 Es notable el grupo liderado por Roberto González. Más al centro del grafo, vemos la comunidad de Darío Páez, el único gran productor del grupo amarillo.
 
-En el grupo de color cyan, encontramos el grupo de la Universidad de Concepción, con dos grandes productores: Félix Cova y Claudio Bustos, 
-quien fue mi profesor guía en mi memoria de título.
+En el grupo de color cyan, encontramos el grupo de la Universidad de Concepción, con dos grandes productores: Félix Cova y Claudio Bustos, quien fue mi profesor guía en mi memoria de título.
 
-En resumen, cada comunidad cuenta con al menos un gran productor, alguien ya establecido en el área de la investigación. Como detallo en mi memoria de título, 
-estos grupos suelen publicar en al menos dos áreas de investigación en psicología.
+En resumen, cada comunidad cuenta con al menos un gran productor, alguien ya establecido en el área de la investigación. Como detallo en mi memoria de título, estos grupos suelen publicar en al menos dos áreas de investigación en psicología.
 """)
