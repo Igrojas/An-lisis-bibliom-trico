@@ -98,9 +98,11 @@ st.subheader("Incremento en la Productividad Científica")
 st.write("""
 En los últimos años, se ha observado un notable incremento en la productividad científica en Chile,
 con un aumento promedio anual del 10,46%. El año 2020 destacó por alcanzar el mayor número de publicaciones, con un total de 657 artículos.
+
 En contraste, los años 2015 y 2016 tuvieron la menor productividad, con un total de 404 artículos publicados en cada uno de esos años.
 Este aumento en la productividad se ha reflejado tanto en publicaciones en español como en inglés.
 Sin embargo, se ha observado un ligero incremento en las publicaciones en español, con un aumento anual del 3,61%.
+
 Por otro lado, las publicaciones en inglés han mostrado un crecimiento anual del 16,09%, representando un incremento significativamente mayor en comparación con las publicaciones en español.
 """)
 
@@ -137,6 +139,7 @@ st.subheader("Crecimiento por Áreas de la Psicología")
 st.write("""
 Las áreas de la psicología que experimentaron los mayores aumentos en la cantidad de artículos fueron Psicología del trabajo y organizaciones,
 con una tasa de crecimiento anual promedio del 18,04%, seguida de Psicología evolutiva y educacional, con un crecimiento del 15,20%.
+
 Por otro lado, las áreas que mostraron los menores aumentos fueron Psicoterapia, con una tasa de crecimiento anual promedio del 3,47%,
 y Psicometría, con un crecimiento del 7,16%. Estos resultados reflejan las diferencias en el crecimiento promedio entre las distintas áreas de la psicología durante el período analizado.
 """)
