@@ -17,32 +17,26 @@ st.set_page_config(page_title="Estudio Bibliométrico de la Actividad Científic
 st.title("Estudio Bibliométrico de la Actividad Científica en Psicología en Chile (2015-2020)")
 
 st.markdown("""
-**Los resultados que se presentan a continuación corres ponden a los obtenidso en mi memoria de titulo llamada Estudio Bibliométrico de las Redes de Coautoría de la Literatura en Psicología de Chile en el Período 2015-2020
-para el Proyecto FONDECYT Regular 1201681**
+Los resultados que se presentan a continuación corresponden a los obtenidos en mi memoria de título llamada Estudio Bibliométrico de las Redes de Coautoría de la Literatura en Psicología de Chile en el Período 2015-2020 para el Proyecto FONDECYT Regular 1201681
 """)
-
 st.write("""
-El objetivo de este proyecto es realizar un estudio bibliométrico de la actividad científica en psicología en Chile durante el período de 2015 a 2020. 
+El objetivo de este proyecto es realizar un estudio bibliométrico de la actividad científica en psicología en Chile durante el período de 2015 a 2020.
 Utilizando datos de las reconocidas bases de datos Scielo, Scopus y WoS, este análisis se enfoca en la productividad y las redes sociales basadas en la coautoría.
 """)
-
 st.write("""
-Este tipo de estudio permite obtener una perspectiva cuantitativa de la producción científica en el área de la psicología, 
+Este tipo de estudio permite obtener una perspectiva cuantitativa de la producción científica en el área de la psicología,
 lo cual puede ser de gran utilidad para la toma de decisiones y la planificación estratégica en la investigación psicológica.
 """)
-
 st.write("""
-Se recopilaron y analizaron datos de artículos publicados en las bases de datos mencionadas, 
+Se recopilaron y analizaron datos de artículos publicados en las bases de datos mencionadas,
 focalizándose en las redes de coautoría y en la productividad científica de los investigadores chilenos en psicología.
 """)
-
 st.write("""
-Los resultados obtenidos proporcionan una visión detallada de la evolución de la actividad científica en psicología en Chile, 
+Los resultados obtenidos proporcionan una visión detallada de la evolución de la actividad científica en psicología en Chile,
 identificando las principales áreas de investigación, así como las colaboraciones entre investigadores y las instituciones más productivas.
 """)
-
 st.write("""
-El análisis bibliométrico realizado ofrece valiosa información para la comunidad científica y las autoridades académicas, 
+El análisis bibliométrico realizado ofrece valiosa información para la comunidad científica y las autoridades académicas,
 facilitando la planificación de estrategias futuras en el ámbito de la investigación en psicología.
 """)
 
