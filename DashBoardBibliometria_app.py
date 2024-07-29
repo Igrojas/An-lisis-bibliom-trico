@@ -133,11 +133,10 @@ with col5:
 
 st.subheader("Crecimiento por Áreas de la Psicología")
 st.write("""
-Las áreas de la psicología que experimentaron los mayores aumentos en la cantidad de artículos fueron Psicología del trabajo y organizaciones, 
-con una tasa de crecimiento anual promedio del 18,04 %, seguida de Psicología evolutiva y educacional, con un crecimiento del 15,20 %. 
-
-Por otro lado, las áreas que mostraron los menores aumentos fueron Psicoterapia, con una tasa de crecimiento anual promedio del 3,47 %, 
-y Psicometría, con un crecimiento del 7,16 %. Estos resultados reflejan las diferencias en el crecimiento promedio entre las distintas áreas de la psicología durante el período analizado.
+Las áreas de la psicología que experimentaron los mayores aumentos en la cantidad de artículos fueron Psicología del trabajo y organizaciones,
+con una tasa de crecimiento anual promedio del 18,04%, seguida de Psicología evolutiva y educacional, con un crecimiento del 15,20%.
+Por otro lado, las áreas que mostraron los menores aumentos fueron Psicoterapia, con una tasa de crecimiento anual promedio del 3,47%,
+y Psicometría, con un crecimiento del 7,16%. Estos resultados reflejan las diferencias en el crecimiento promedio entre las distintas áreas de la psicología durante el período analizado.
 """)
 
 
