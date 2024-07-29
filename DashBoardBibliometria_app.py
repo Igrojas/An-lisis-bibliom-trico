@@ -64,13 +64,10 @@ with col4:
     st.metric("Paper por autores", round(n_paper_por_autores, 2))
 
 st.header("Análisis de datos bibliométricos utilizando gráficos interactivos")
-
 st.subheader("Análisis de Productores, Afiliaciones y Revistas Más Productivas")
 st.write("""
-Entre los mayores productores con afiliación chilena, Agustín Ibáñez encabeza la lista con 60 artículos científicos, de los cuales 59 están firmados por Chile. En segundo lugar se encuentra Adolfo García, con 38 artículos científicos, de los cuales 9 están firmados por Chile. El primer chileno en la lista es Alfonso Urzúa, en tercer lugar, con 36 artículos, todos ellos firmados por Chile.
-
+Entre los mayores productores con afiliación chilena, Agustín Ibáñez encabeza la lista con 60 artículos científicos, de los cuales 59 están firmados por investigadores chilenos. En segundo lugar se encuentra Adolfo García, con 38 artículos científicos, de los cuales 9 están firmados por investigadores chilenos. El primer investigador chileno en la lista es Alfonso Urzúa, en tercer lugar, con 36 artículos, todos ellos firmados por investigadores chilenos.
 La Pontificia Universidad Católica de Chile se sitúa en el primer lugar del ranking de afiliaciones más productivas, con 637 artículos científicos, seguida por la Universidad de Chile con 462 artículos. Ambas instituciones representan el 36% de la producción científica del país.
-
 Tres revistas principales se destacan por tener más de 100 artículos, superando al resto de las revistas. En primer lugar, encontramos Frontiers in Psychology, una revista de origen suizo, que lidera con el 31% de las publicaciones. En segundo lugar, está la revista chilena Psicoperspectivas, con el 21% de las publicaciones. Finalmente, la revista Universitas Psychologica representa el 18,24% de las publicaciones.
 """)
 
@@ -97,13 +94,12 @@ with col3:
 
 st.subheader("Incremento en la Productividad Científica")
 st.write("""
-En los últimos años, se ha observado un notable incremento en la productividad científica en Chile, 
-con un aumento promedio anual del 10,46 %. El año 2020 destacó por alcanzar el mayor número de publicaciones, con un total de 657 artículos. 
-En contraste, los años 2015 y 2016 tuvieron la menor productividad, con un total de 404 artículos publicados en cada año.
-
-Este aumento en la productividad se ha reflejado tanto en publicaciones en español como en inglés. 
-Sin embargo, se ha observado un ligero incremento en las publicaciones en español, con un aumento anual del 3,61 %. 
-Por otro lado, las publicaciones en inglés han mostrado un crecimiento anual del 16,09 %, representando un incremento significativamente mayor en comparación con las publicaciones en español.
+En los últimos años, se ha observado un notable incremento en la productividad científica en Chile,
+con un aumento promedio anual del 10,46%. El año 2020 destacó por alcanzar el mayor número de publicaciones, con un total de 657 artículos.
+En contraste, los años 2015 y 2016 tuvieron la menor productividad, con un total de 404 artículos publicados en cada uno de esos años.
+Este aumento en la productividad se ha reflejado tanto en publicaciones en español como en inglés.
+Sin embargo, se ha observado un ligero incremento en las publicaciones en español, con un aumento anual del 3,61%.
+Por otro lado, las publicaciones en inglés han mostrado un crecimiento anual del 16,09%, representando un incremento significativamente mayor en comparación con las publicaciones en español.
 """)
 
 
