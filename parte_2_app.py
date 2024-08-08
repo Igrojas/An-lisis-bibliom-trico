@@ -13,7 +13,7 @@ st.sidebar.markdown('''
 - [Inicio](#inicio)
 - [Grafos y Centralidad](#grafos)
 - [AuthorRank](#authorrank)
-- [Algoritmo ABCD](#algoritmo-abcd)
+- [Algoritmo ABCD](#abcd)
 
 # Otros temas
 
@@ -60,8 +60,7 @@ Estas 3 respuestas tienen un nombre, **CENTRALIDAD**, que para cada respuesta en
 Por lo que para aplicar estos conceptos, necesitamos saber a que estructura matemática son aplicables, para ello veamos que es un **GRAFO**
 """)
 
-st.title("¿Qué es un Grafo?")
-st.header("Grafos")
+st.header("¿Qué es un Grafo?", anchor= 'grafos')
 
 st.markdown("""
 Un grafo es una estructura matemática que consiste en un conjunto de **vértices** (nodos) y **aristas** (enlaces) que los conectan. 
@@ -197,9 +196,7 @@ st.markdown("""
 De acuerdo con el algoritmo de PageRank, el nodo más "importante" de la red es el nodo $14$, el cual es el nodo que otros nodos "importantes" apuntan, seguido del nodo $13$ y el nodo $9$.
 """)
 
-st.title("Entonces, ¿de qué va mi memoria de título?")
-
-st.header("AuthorRank")
+st.header("Entonces, ¿de qué va mi memoria de título?", anchor= 'authorrank')
 
 st.markdown("""
 **Red de Coautoría y Medidas de Centralidad**
@@ -277,9 +274,8 @@ sería Alfonso Urzúa, Profesor Titular Chileno de la Universidad Católica del 
 
 
 
-st.title("¿Qué autor trabaja con quién?")
+st.header("¿Qué autor trabaja con quién?", anchor='abcd')
 
-st.header("Algoritmo ABCD")
 
 st.markdown("""
 Al observar la red de coautoría, ¿es evidente quién trabaja con quién? En el caso de Agustín Ibáñez, el mayor productor en Chile, su desconexión de la red más grande del grafo sugiere claramente que se trata de su propio grupo de trabajo. Sin embargo, ¿cómo determinamos los grupos de Alfonso Urzúa o Marianne Krause? Para esto, utilizamos un algoritmo aglomerativo que, en función de la cantidad de artículos y el valor de AuthorRank, nos permite identificar cada grupo de trabajo.
