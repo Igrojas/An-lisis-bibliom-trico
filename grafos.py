@@ -80,7 +80,6 @@ def GrafoEjemplo():
                     (6,7),(2,6),(6,13)])
     return G
 
-
 fig, axs = plt.subplots(1, 3, figsize=(30, 10))
 def PlotCentralidad(G, ax, centrality, title, label):
 
@@ -99,7 +98,6 @@ def PlotCentralidad(G, ax, centrality, title, label):
     fig.colorbar(sm, ax=ax, orientation='vertical', label=label)
     ax.set_title(title, fontsize=16)
 
-
 def GrafoDirigidoEjemplo():
     G = nx.DiGraph()
 
@@ -113,7 +111,6 @@ def GrafoDirigidoEjemplo():
                     (6,7),(2,6),(6,13)])
     
     return G
-
 
 def PlotPagerank(G, centrality):
     fig, ax = plt.subplots()

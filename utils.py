@@ -17,7 +17,6 @@ def principales_indicadores(salida_autores, salida_articulos):
 
     return num_autores, num_articulos, n_autores_por_paper, n_paper_por_autores
 
-
 def n_articulos_por_autor(salida_autores):
     autores_por_paper = salida_autores.sort_values(by=['n_articles_total'], ascending=False)
     autores_por_paper = autores_por_paper.loc[:, ['name_author', 'n_articles_total', 'n_articulos_chile']]
