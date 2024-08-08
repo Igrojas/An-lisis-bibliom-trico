@@ -5,3 +5,5 @@ openpyxl
 streamlit_agraph
 pygraphviz 
 scipy 
+streamlit-navigation-bar
+
